@@ -293,94 +293,104 @@
     },
     "5218": {
         "config_name": "Hikita San Config 2",
-        "extracted_on": "2026-01-13 23:48:53",
+        "extracted_on": "2026-04-13 18:10:29",
         "extraction_log": [
             {
-                "env": "Iwate",
-                "sql_name": "VM",
-                "record_count": 19995
-            },
-            {
-                "env": "Shikoku",
-                "sql_name": "VM",
-                "record_count": 30745
-            },
-            {
-                "env": "Okinawa",
-                "sql_name": "VM",
-                "record_count": 7890
+                "env": "Wakayama",
+                "record_count": 8564,
+                "sql_name": "CM Old Conditions"
             },
             {
                 "env": "Wakayama",
-                "sql_name": "VM",
-                "record_count": 8854
-            },
-            {
-                "env": "Iwate",
-                "sql_name": "CM Old Conditions",
-                "record_count": 11547
-            },
-            {
-                "env": "Shikoku",
-                "sql_name": "CM Old Conditions",
-                "record_count": 17044
+                "record_count": 9162,
+                "sql_name": "VM"
             },
             {
                 "env": "Okinawa",
-                "sql_name": "CM Old Conditions",
-                "record_count": 10319
+                "record_count": 10374,
+                "sql_name": "CM Old Conditions"
             },
             {
-                "env": "Wakayama",
-                "sql_name": "CM Old Conditions",
-                "record_count": 8548
+                "env": "Okinawa",
+                "record_count": 8061,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 11611,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 20523,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 17241,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 31755,
+                "sql_name": "VM"
             }
         ]
     },
     "5256": {
         "config_name": "Hikita San Config 1",
-        "extracted_on": "2026-01-21 23:13:46",
+        "extracted_on": "2026-04-13 19:34:36",
         "extraction_log": [
             {
-                "env": "Okayama",
-                "sql_name": "VM",
-                "record_count": 45844
-            },
-            {
-                "env": "Aomori",
-                "sql_name": "VM",
-                "record_count": 21079
+                "env": "Hakodate",
+                "record_count": 2463,
+                "sql_name": "CM Old Conditions"
             },
             {
                 "env": "Hakodate",
-                "sql_name": "VM",
-                "record_count": 8981
-            },
-            {
-                "env": "Chugoku",
-                "sql_name": "VM",
-                "record_count": 1397192
+                "record_count": 9128,
+                "sql_name": "VM"
             },
             {
                 "env": "Okayama",
-                "sql_name": "CM Old Conditions",
-                "record_count": 20021
+                "record_count": 20094,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Okayama",
+                "record_count": 46530,
+                "sql_name": "VM"
             },
             {
                 "env": "Aomori",
-                "sql_name": "CM Old Conditions",
-                "record_count": 14536
+                "record_count": 14577,
+                "sql_name": "CM Old Conditions"
             },
             {
-                "env": "Hakodate",
-                "sql_name": "CM Old Conditions",
-                "record_count": 2453
+                "env": "Aomori",
+                "record_count": 21401,
+                "sql_name": "VM"
             },
             {
                 "env": "Chugoku",
-                "sql_name": "CM New Conditions",
-                "record_count": 60241
+                "record_count": 60310,
+                "sql_name": "CM New Conditions"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 1398143,
+                "sql_name": "VM"
             }
         ]
+    },
+    "5908": {
+        "config_name": "Hikita San Config 1",
+        "extracted_on": "No Extractions Yet",
+        "extraction_log": ""
+    },
+    "5909": {
+        "config_name": "",
+        "extracted_on": "No Extractions Yet",
+        "extraction_log": ""
     }
 }

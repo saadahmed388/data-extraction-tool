@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QInputDialog,
     QMessageBox, QTableWidget, QTableWidgetItem, QFrame, QDialog, QStyle, QHeaderView, QHBoxLayout, QApplication
@@ -5,17 +7,23 @@ from PyQt5.QtWidgets import (
 from utilities.custom_widgets import StyledInputDialog
 from PyQt5.QtCore import Qt
 from core.db_client import DBClient
+import logging
+
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from core.managers.connection_manager import ConnectionManager
+
+logger = logging.getLogger(__name__)
 
 class ConnectionsTab(QWidget):
-    def __init__(self, db_clients, db_configs_manager, styling_manager):
+    def __init__(self, connection_manager: ConnectionManager, styling_manager):
         super().__init__()
-        self.db_configs_manager = db_configs_manager
+        self.connection_manager = connection_manager
         self.styling_manager = styling_manager
         self.connections = []
-        self.db_clients = db_clients
-                
-        layout = QVBoxLayout()
+        self.db_clients = self.connection_manager.db_clients
         
+        layout = QVBoxLayout()
         btn_layout = QHBoxLayout()
         self.add_con_btn = QPushButton("Add Connection")
         self.mod_con_btn = QPushButton("Modify Connection")        
@@ -40,21 +48,29 @@ class ConnectionsTab(QWidget):
         self.add_con_btn.clicked.connect(self.add_connection)
         self.mod_con_btn.clicked.connect(self.modify_connection)
         self.rem_con_btn.clicked.connect(self.remove_connection)
-        self.db_configs_manager.connections_updated.connect(self.load_connections)
+        self.connection_manager.connections_updated.connect(self.load_connections)
         self.load_connections()
         
     def load_connections(self):
+
         self.tree.clear()
-        self.connections = self.db_configs_manager.get_all_connections()
-        self.connect_all()
+        self.connections = self.connection_manager.get_all_connections()
+        self.db_clients = self.connection_manager.get_all_clients()
+
         for connection in self.connections:
+            
             env = connection["name"]
-            user = connection["user"]
+            username = connection["user"]
             dsn = connection["dsn"]
-            item = QTreeWidgetItem(['', env, user, dsn])
+
+            item = QTreeWidgetItem(['', env, username, dsn])
+            
             item.setFlags(item.flags() | Qt.ItemIsUserCheckable)
             item.setTextAlignment(0, Qt.AlignCenter)
             item.setCheckState(0, Qt.Checked)
+            if env not in self.db_clients.keys():
+                item.setCheckState(0, Qt.Unchecked)
+            
             self.tree.addTopLevelItem(item)
             
     def add_connection(self):
@@ -62,21 +78,30 @@ class ConnectionsTab(QWidget):
         name, ok1 = StyledInputDialog("Add Connection", "Enter connection name:").get_text()        
         if not ok1 or not name:
             return
-        username, ok2 = StyledInputDialog("Username", "Enter Username:", "Y").get_text()
+        username, ok2 = StyledInputDialog("Username", "Enter Username:").get_text()
         if not ok2 or not username:
             return   
-        password, ok3 = StyledInputDialog("Password", "Enter Password:", "Y").get_text()
+        password, ok3 = StyledInputDialog("Password", "Enter Password:").get_text()
         if not ok3 or not password:
             return            
-        dsn, ok4 = StyledInputDialog("DSN", "Enter DSN:", "Y").get_text()
+        dsn, ok4 = StyledInputDialog("DSN", "Enter DSN:").get_text()
         if not ok4 or not dsn:
             return 
         
-        self.db_configs_manager.add_connection(name, username, password, dsn)
+        name = name.strip()
+        username = username.strip()
+        password = password.strip()
+        dsn = dsn.strip()
+                
+        if not self.connection_manager.add_connection(name, username, password, dsn):
+            QMessageBox.information(self, "Connection Window", f"Invalid Credentials...")
+            return
+        QMessageBox.information(self, "Connection Window", f"Connection Successful")
+
     
     def remove_connection(self):
         
-        self.db_configs_manager.remove_connection(self.tree.currentItem().text(0))
+        self.connection_manager.remove_connection(self.tree.currentItem().text(1))
     
     def modify_connection(self):
         
@@ -102,11 +127,11 @@ class ConnectionsTab(QWidget):
             QMessageBox.warning(self, "Name already exists", "Please choose another name.")
             return
         
-        new_username, ok2 = StyledInputDialog("Edit Username", "Enter new username:", "Y", old_username).get_text()
+        new_username, ok2 = StyledInputDialog("Edit Username", "Enter new username:", "N", old_username).get_text()
         if not ok2 or not new_username:
             return
             
-        new_password, ok3 = StyledInputDialog("Edit Password", "Enter new password:", "Y", old_password).get_text()
+        new_password, ok3 = StyledInputDialog("Edit Password", "Enter new password:", "N", old_password).get_text()
         if not ok3 or not new_password:
             return
             
@@ -114,19 +139,29 @@ class ConnectionsTab(QWidget):
         if not ok4 or not new_dsn:
             return
         
+        new_name = new_name.strip()
+        new_username = new_username.strip()
+        new_password = new_password.strip()
+        new_dsn = new_dsn.strip()
+
+        if not self.connection_manager.connect_modified(new_name, new_username, new_password, new_dsn, self.db_clients):
+            QMessageBox.information(self, "Connection Window", f"Invalid Credentials...")
+            return
+        QMessageBox.information(self, "Connection Window", f"Connection Successful")
+
         for c in self.connections:
             if c["name"] == old_name:
-                if ok1 and new_name.strip():
-                    c["name"] = new_name.strip()
-                if ok2 and new_username.strip():
-                    c["user"] = new_username.strip()
-                if ok3 and new_password.strip():
-                    c["password"] = new_password.strip()
-                if ok4 and new_dsn.strip():
-                    c["dsn"] = new_dsn.strip()
+                if ok1 and new_name:
+                    c["name"] = new_name
+                if ok2 and new_username:
+                    c["user"] = new_username
+                if ok3 and new_password:
+                    c["password"] = new_password
+                if ok4 and new_dsn:
+                    c["dsn"] = new_dsn
                 break
 
-        self.db_configs_manager.save_connections() 
+        self.connection_manager.save_connections() 
      
     def check_name(self, new_name, old_name):
         for c in self.connections:
@@ -134,27 +169,6 @@ class ConnectionsTab(QWidget):
                 return True
             else:
                 return False
-    
-    def connect_all(self):
-        
-        for c in self.connections:
-            con_name = c["name"]
-            connection = DBClient(
-                user=c["user"],
-                password=c["password"],
-                dsn=c["dsn"]
-            )
-            try:
-                connection.connect()
-                
-            except Exception as e:
-                QMessageBox.critical(
-                    self,
-                    "Connection Failed",
-                    f"{con_name} connection failed:\n{str(e)}"
-                )
-            
-            self.db_clients[con_name] = connection
             
     def get_active_connections(self):
         QApplication.processEvents()

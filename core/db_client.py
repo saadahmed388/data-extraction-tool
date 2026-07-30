@@ -1,6 +1,5 @@
 # ---------------- core/db_client.py ----------------
 import oracledb
-from decimal import Decimal
 
 class DBClient:
     def __init__(self, user, password, dsn):
@@ -8,10 +7,23 @@ class DBClient:
         self.password = password
         self.dsn = dsn
         self.conn = None
+        self.pool = self.get_pool()
+
+    def get_pool(self):
+        pool = oracledb.create_pool(
+            user=self.user,
+            password=self.password,
+            dsn=self.dsn,
+            min=2,
+            max=10,
+            increment=1,
+            timeout=60
+        )
+        return pool
 
     def connect(self):
         self.conn = oracledb.connect(user=self.user, password=self.password, dsn=self.dsn)
-    
+
     def execute_select(self, sql, bind_vars=None):
         cursor = self.conn.cursor()
         try:
@@ -43,3 +55,4 @@ class DBClient:
     def close(self):
         self.conn.close()
 
+   

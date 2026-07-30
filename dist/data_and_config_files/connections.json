@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Aomori",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPA"
+    },
+    {
+        "name": "Okayama",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPO"
+    },
+    {
+        "name": "Hakodate",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPH"
+    },
+    {
+        "name": "Iwate",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPI"
+    },
+    {
+        "name": "Shikoku",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPS"
+    },
+    {
+        "name": "Okinawa",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPN"
+    },
+    {
+        "name": "Wakayama",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPW"
+    },
+    {
+        "name": "Chugoku",
+        "user": "READUSER",
+        "password": "READUSER",
+        "dsn": "SIEBFDPC"
+    }
+]

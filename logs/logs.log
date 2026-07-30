@@ -1,0 +1,51 @@
+2026-07-13 19:19:09,984 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-07-13 19:19:10,034 | ERROR | MainThread | __main__ | app.py:23  | Unhandled Exception
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Tools\Data Extraction\app.py", line 19, in <module>
+    win = MainWindow()
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Tools\Data Extraction\ui\main_window.py", line 28, in __init__
+    self.connection_manager = ConnectionManager()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Tools\Data Extraction\core\managers\connection_manager.py", line 19, in __init__
+    self.connect_all()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Tools\Data Extraction\core\managers\connection_manager.py", line 90, in connect_all
+    pool = connection.pool
+           ^^^^^^^^^^^^^^^
+AttributeError: 'DBClient' object has no attribute 'pool'
+2026-07-13 19:21:31,526 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-07-13 19:21:31,650 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Aomori pool OK
+2026-07-13 19:21:31,681 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Okayama pool OK
+2026-07-13 19:21:31,714 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Hakodate pool OK
+2026-07-13 19:21:31,774 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Iwate pool OK
+2026-07-13 19:21:31,841 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Shikoku pool OK
+2026-07-13 19:21:31,901 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Okinawa pool OK
+2026-07-13 19:21:31,944 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Wakayama pool OK
+2026-07-13 19:21:31,978 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Chugoku pool OK
+2026-07-13 19:21:32,054 | ERROR | MainThread | __main__ | app.py:23  | Unhandled Exception
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Tools\Data Extraction\app.py", line 19, in <module>
+    win = MainWindow()
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Tools\Data Extraction\ui\main_window.py", line 35, in __init__
+    self.connections_tab = ConnectionsTab(self.db_clients, self.connection_manager, self.styling_manager)
+                           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConnectionsTab.__init__() takes 3 positional arguments but 4 were given
+2026-07-13 19:22:10,342 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-07-13 19:22:10,423 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Aomori pool OK
+2026-07-13 19:22:10,477 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Okayama pool OK
+2026-07-13 19:22:10,502 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Hakodate pool OK
+2026-07-13 19:22:10,534 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Iwate pool OK
+2026-07-13 19:22:10,569 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Shikoku pool OK
+2026-07-13 19:22:10,623 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Okinawa pool OK
+2026-07-13 19:22:10,679 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Wakayama pool OK
+2026-07-13 19:22:10,711 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Chugoku pool OK
+2026-07-13 19:44:03,609 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-07-13 19:44:03,727 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Aomori pool OK
+2026-07-13 19:44:03,754 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Okayama pool OK
+2026-07-13 19:44:03,813 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Hakodate pool OK
+2026-07-13 19:44:03,847 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Iwate pool OK
+2026-07-13 19:44:03,907 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Shikoku pool OK
+2026-07-13 19:44:03,961 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Okinawa pool OK
+2026-07-13 19:44:04,010 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Wakayama pool OK
+2026-07-13 19:44:04,066 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Chugoku pool OK
+2026-07-13 19:44:34,754 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | UAT1 pool OK

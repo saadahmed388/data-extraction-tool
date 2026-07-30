@@ -641,5 +641,99 @@
                 "record_count": 60241
             }
         ]
+    },
+    {
+        "sr_num": "5218",
+        "config": "Hikita San Config 2",
+        "date_extracted": "2026-04-13 18:10:29",
+        "extraction_log": [
+            {
+                "env": "Wakayama",
+                "record_count": 8564,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Wakayama",
+                "record_count": 9162,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Okinawa",
+                "record_count": 10374,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Okinawa",
+                "record_count": 8061,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 11611,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 20523,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 17241,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 31755,
+                "sql_name": "VM"
+            }
+        ]
+    },
+    {
+        "sr_num": "5256",
+        "config": "Hikita San Config 1",
+        "date_extracted": "2026-04-13 19:34:36",
+        "extraction_log": [
+            {
+                "env": "Hakodate",
+                "record_count": 2463,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Hakodate",
+                "record_count": 9128,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Okayama",
+                "record_count": 20094,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Okayama",
+                "record_count": 46530,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 14577,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 21401,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 60310,
+                "sql_name": "CM New Conditions"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 1398143,
+                "sql_name": "VM"
+            }
+        ]
     }
 ]

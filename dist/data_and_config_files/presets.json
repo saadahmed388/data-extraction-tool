@@ -1,0 +1,254 @@
+{
+    "Hikita San VM SR Part 1": [
+        {
+            "active": true,
+            "env": "Okayama",
+            "sql": "VM"
+        },
+        {
+            "active": true,
+            "env": "Aomori",
+            "sql": "VM"
+        },
+        {
+            "active": true,
+            "env": "Hakodate",
+            "sql": "VM"
+        },
+        {
+            "active": false,
+            "env": "Iwate",
+            "sql": "VM"
+        },
+        {
+            "active": false,
+            "env": "Shikoku",
+            "sql": "VM"
+        },
+        {
+            "active": false,
+            "env": "Okinawa",
+            "sql": "VM"
+        },
+        {
+            "active": false,
+            "env": "Wakayama",
+            "sql": "VM"
+        },
+        {
+            "active": true,
+            "env": "Chugoku",
+            "sql": "VM"
+        }
+    ],
+    "Hikita San CM SR Part 1": [
+        {
+            "active": true,
+            "env": "Okayama",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Aomori",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Hakodate",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Iwate",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Shikoku",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Okinawa",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Wakayama",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Chugoku",
+            "sql": "CM New Conditions"
+        }
+    ],
+    "Ikezawa San CM SR": [
+        {
+            "active": false,
+            "env": "Okayama",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Aomori",
+            "sql": "CM Ikezawa"
+        },
+        {
+            "active": false,
+            "env": "Hakodate",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Iwate",
+            "sql": "CM Ikezawa"
+        },
+        {
+            "active": true,
+            "env": "Shikoku",
+            "sql": "CM Ikezawa"
+        },
+        {
+            "active": false,
+            "env": "Okinawa",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Wakayama",
+            "sql": "CM Ikezawa"
+        },
+        {
+            "active": true,
+            "env": "Chugoku",
+            "sql": "CM Ikezawa"
+        }
+    ],
+    "Ikezawa San VM SR": [
+        {
+            "active": false,
+            "env": "Okayama",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Aomori",
+            "sql": "VM Ikezawa"
+        },
+        {
+            "active": false,
+            "env": "Hakodate",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Iwate",
+            "sql": "VM Ikezawa"
+        },
+        {
+            "active": true,
+            "env": "Shikoku",
+            "sql": "VM Ikezawa"
+        },
+        {
+            "active": false,
+            "env": "Okinawa",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Wakayama",
+            "sql": "VM Ikezawa"
+        },
+        {
+            "active": true,
+            "env": "Chugoku",
+            "sql": "VM Ikezawa"
+        }
+    ],
+    "Hikita San VM SR Part 2": [
+        {
+            "active": false,
+            "env": "Okayama",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Aomori",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Hakodate",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Iwate",
+            "sql": "VM"
+        },
+        {
+            "active": true,
+            "env": "Shikoku",
+            "sql": "VM"
+        },
+        {
+            "active": true,
+            "env": "Okinawa",
+            "sql": "VM"
+        },
+        {
+            "active": true,
+            "env": "Wakayama",
+            "sql": "VM"
+        },
+        {
+            "active": false,
+            "env": "Chugoku",
+            "sql": "CM Old Conditions"
+        }
+    ],
+    "Hikita San CM SR Part 2": [
+        {
+            "active": false,
+            "env": "Okayama",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Aomori",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Hakodate",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Iwate",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Shikoku",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Okinawa",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": true,
+            "env": "Wakayama",
+            "sql": "CM Old Conditions"
+        },
+        {
+            "active": false,
+            "env": "Chugoku",
+            "sql": "CM Old Conditions"
+        }
+    ]
+}

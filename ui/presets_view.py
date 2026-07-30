@@ -3,12 +3,13 @@ from PyQt5.QtWidgets import (
     QPushButton, QTextEdit, QListWidgetItem, QTableWidget, QComboBox, QTreeWidget, QInputDialog, QTreeWidgetItem
 )
 from PyQt5.QtCore import QObject, pyqtSignal, Qt
+from core.managers.query_manager import QueryManager
 import json
 import os
 
 
 class PresetsTab(QWidget):
-    def __init__(self, query_manager, db_configs_manager, styling_manager, presets_manager):
+    def __init__(self, query_manager: QueryManager, db_configs_manager, styling_manager, presets_manager):
         super().__init__()
         self.query_manager = query_manager
         self.db_configs_manager = db_configs_manager
@@ -87,7 +88,7 @@ class PresetsTab(QWidget):
         
         self.preset_list.currentItemChanged.connect(self.load_preset_tree)
         self.presets_manager.presets_list_updated.connect(self.load_presets)
-               
+            
                 
     def load_presets(self):        
         self.preset_list.clear()
@@ -113,6 +114,7 @@ class PresetsTab(QWidget):
             ])
             item.setFlags(item.flags() | Qt.ItemIsUserCheckable)
             item.setCheckState(0, Qt.Checked if entry["active"] else Qt.Unchecked)
+        
             self.tree.addTopLevelItem(item)
             sql_selector = QComboBox()
             sql_selector.setView(QListView())

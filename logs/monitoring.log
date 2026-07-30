@@ -1,0 +1,90 @@
+2026-04-13 18:08:58,171 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-04-13 18:09:15,984 | INFO | MainThread | ui.export_view | export_view.py:181  | Execution started of configuration : {selected_config} || SR# : {sr_num} .
+2026-04-13 18:09:15,986 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:75  | Execution Started || ENV: Iwate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:09:15,986 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:75  | Execution Started || ENV: Shikoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:09:15,987 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:75  | Execution Started || ENV: Okinawa || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:09:15,987 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:75  | Execution Started || ENV: Wakayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:09:15,988 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:75  | Execution Started || ENV: Iwate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:09:15,988 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:75  | Execution Started || ENV: Okinawa || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:09:15,989 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:75  | Execution Started || ENV: Shikoku || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:09:15,989 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:75  | Execution Started || ENV: Wakayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:09:17,951 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:85  | Execution Successful || ENV: Wakayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 8564
+2026-04-13 18:09:18,086 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:85  | Execution Successful || ENV: Wakayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 9162
+2026-04-13 18:09:21,202 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okinawa || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 10374
+2026-04-13 18:09:21,305 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okinawa || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 8061
+2026-04-13 18:09:22,332 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:85  | Execution Successful || ENV: Iwate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 11611
+2026-04-13 18:09:23,135 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:85  | Execution Successful || ENV: Iwate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 20523
+2026-04-13 18:09:23,404 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:85  | Execution Successful || ENV: Shikoku || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 17241
+2026-04-13 18:09:24,207 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:85  | Execution Successful || ENV: Shikoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 31755
+2026-04-13 18:10:03,123 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-04-13 18:10:19,243 | INFO | MainThread | ui.export_view | export_view.py:181  | Execution started of configuration : {selected_config} || SR# : {sr_num} .
+2026-04-13 18:10:19,244 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:75  | Execution Started || ENV: Iwate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:10:19,245 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:75  | Execution Started || ENV: Shikoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:10:19,245 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:75  | Execution Started || ENV: Okinawa || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:10:19,246 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:75  | Execution Started || ENV: Wakayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2
+2026-04-13 18:10:19,246 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:75  | Execution Started || ENV: Iwate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:10:19,247 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:75  | Execution Started || ENV: Shikoku || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:10:19,248 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:75  | Execution Started || ENV: Okinawa || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:10:19,248 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:75  | Execution Started || ENV: Wakayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2
+2026-04-13 18:10:21,077 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:85  | Execution Successful || ENV: Wakayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 8564
+2026-04-13 18:10:21,230 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:85  | Execution Successful || ENV: Wakayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 9162
+2026-04-13 18:10:22,000 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okinawa || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 10374
+2026-04-13 18:10:22,105 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okinawa || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 8061
+2026-04-13 18:10:22,703 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:85  | Execution Successful || ENV: Iwate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 11611
+2026-04-13 18:10:23,557 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:85  | Execution Successful || ENV: Iwate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 20523
+2026-04-13 18:10:23,877 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:85  | Execution Successful || ENV: Shikoku || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 2 || Count: 17241
+2026-04-13 18:10:24,726 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:85  | Execution Successful || ENV: Shikoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 2 || Count: 31755
+2026-04-13 18:10:24,790 | INFO | MainThread | ui.export_view | export_view.py:194  | Execution Complete ......... Records successfully exported.
+2026-04-13 18:10:35,476 | INFO | MainThread | ui.export_view | export_view.py:181  | Execution started of configuration : {selected_config} || SR# : {sr_num} .
+2026-04-13 18:14:11,618 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-04-13 18:14:20,187 | INFO | MainThread | ui.export_view | export_view.py:181  | Execution started of configuration : {selected_config} || SR# : {sr_num} .
+2026-04-13 18:14:20,189 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:75  | Execution Started || ENV: Chugoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-04-13 18:14:20,190 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:75  | Execution Started || ENV: Okayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-04-13 18:14:20,190 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:75  | Execution Started || ENV: Aomori || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-04-13 18:14:20,191 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:75  | Execution Started || ENV: Okayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-04-13 18:14:20,191 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:75  | Execution Started || ENV: Hakodate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-04-13 18:14:20,192 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:75  | Execution Started || ENV: Aomori || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-04-13 18:14:20,192 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:75  | Execution Started || ENV: Chugoku || SQL: CM New Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-04-13 18:14:20,193 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:75  | Execution Started || ENV: Hakodate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-04-13 18:14:26,132 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:85  | Execution Successful || ENV: Hakodate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 2463
+2026-04-13 18:14:26,407 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:85  | Execution Successful || ENV: Hakodate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 9128
+2026-04-13 18:14:33,116 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 20094
+2026-04-13 18:14:34,275 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 46530
+2026-04-13 18:14:51,703 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:85  | Execution Successful || ENV: Aomori || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 14577
+2026-04-13 18:14:52,073 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:85  | Execution Successful || ENV: Aomori || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 21401
+2026-04-13 18:22:08,350 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:85  | Execution Successful || ENV: Chugoku || SQL: CM New Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 60310
+2026-04-13 18:22:56,277 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:85  | Execution Successful || ENV: Chugoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 1398143
+2026-04-13 18:22:58,915 | INFO | MainThread | ui.export_view | export_view.py:198  | Execution Complete ......... Records successfully exported.
+2026-04-13 18:22:58,915 | INFO | MainThread | ui.export_view | export_view.py:199  | Time taken : 518.7274117469788
+2026-06-11 02:29:30,452 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-06-11 02:34:21,824 | INFO | MainThread | ui.export_view | export_view.py:181  | Execution started of configuration : {selected_config} || SR# : {sr_num} .
+2026-06-11 02:34:21,828 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:75  | Execution Started || ENV: Iwate || SQL: VM Ikezawa || Class: VM || Preset: Ikezawa San VM SR
+2026-06-11 02:34:21,828 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:75  | Execution Started || ENV: Aomori || SQL: VM Ikezawa || Class: VM || Preset: Ikezawa San VM SR
+2026-06-11 02:34:21,829 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:75  | Execution Started || ENV: Shikoku || SQL: VM Ikezawa || Class: VM || Preset: Ikezawa San VM SR
+2026-06-11 02:34:21,829 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:75  | Execution Started || ENV: Chugoku || SQL: VM Ikezawa || Class: VM || Preset: Ikezawa San VM SR
+2026-06-11 02:34:21,829 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:75  | Execution Started || ENV: Wakayama || SQL: VM Ikezawa || Class: VM || Preset: Ikezawa San VM SR
+2026-06-11 02:34:44,293 | INFO | MainThread | ui.export_view | export_view.py:181  | Execution started of configuration : {selected_config} || SR# : {sr_num} .
+2026-06-11 02:35:00,553 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-06-19 20:26:59,520 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-06-21 03:07:18,596 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-06-21 03:14:42,240 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-06-21 03:16:20,914 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-06-21 03:16:48,646 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-06-21 03:20:21,736 | INFO | MainThread | ui.export_view | export_view.py:181  | Execution started of configuration : {selected_config} || SR# : {sr_num} .
+2026-06-21 03:20:21,738 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:75  | Execution Started || ENV: Okayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-06-21 03:20:21,739 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:75  | Execution Started || ENV: Aomori || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-06-21 03:20:21,740 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:75  | Execution Started || ENV: Hakodate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-06-21 03:20:21,740 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:75  | Execution Started || ENV: Chugoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1
+2026-06-21 03:20:21,741 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:75  | Execution Started || ENV: Aomori || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-06-21 03:20:21,741 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:75  | Execution Started || ENV: Okayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-06-21 03:20:21,742 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:75  | Execution Started || ENV: Hakodate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-06-21 03:20:21,743 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:75  | Execution Started || ENV: Chugoku || SQL: CM New Conditions || Class: CM || Preset: Hikita San CM SR Part 1
+2026-06-21 03:22:07,790 | INFO | ThreadPoolExecutor-0_6 | utilities.executables | executables.py:85  | Execution Successful || ENV: Hakodate || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 2470
+2026-06-21 03:22:08,075 | INFO | ThreadPoolExecutor-0_2 | utilities.executables | executables.py:85  | Execution Successful || ENV: Hakodate || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 9259
+2026-06-21 03:23:22,738 | INFO | ThreadPoolExecutor-0_4 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okayama || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 20157
+2026-06-21 03:23:24,052 | INFO | ThreadPoolExecutor-0_0 | utilities.executables | executables.py:85  | Execution Successful || ENV: Okayama || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 47042
+2026-06-21 03:26:38,735 | INFO | ThreadPoolExecutor-0_5 | utilities.executables | executables.py:85  | Execution Successful || ENV: Aomori || SQL: CM Old Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 14601
+2026-06-21 03:26:39,187 | INFO | ThreadPoolExecutor-0_1 | utilities.executables | executables.py:85  | Execution Successful || ENV: Aomori || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 21736
+2026-06-21 04:54:31,916 | INFO | ThreadPoolExecutor-0_7 | utilities.executables | executables.py:85  | Execution Successful || ENV: Chugoku || SQL: CM New Conditions || Class: CM || Preset: Hikita San CM SR Part 1 || Count: 60342
+2026-06-21 04:55:20,908 | INFO | ThreadPoolExecutor-0_3 | utilities.executables | executables.py:85  | Execution Successful || ENV: Chugoku || SQL: VM || Class: VM || Preset: Hikita San VM SR Part 1 || Count: 1398874
+2026-06-22 22:57:55,614 | INFO | MainThread | __main__ | app.py:13  | Application Started
