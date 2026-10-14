@@ -124,3 +124,62 @@ oracledb.exceptions.DatabaseError: DPY-4027: no configuration directory specifie
                     Connection failed for environment : Chugoku
                     Description : DPY-4027: no configuration directory specified
                 
+2026-10-14 15:00:45,583 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 15:00:46,294 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Aomori
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:00:46,295 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Okayama
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:00:46,295 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Hakodate
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:00:46,295 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Iwate
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:00:46,295 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Shikoku
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:00:46,296 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Okinawa
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:00:46,296 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Wakayama
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:00:46,296 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:99  | Connection failed for environment : Chugoku
+                        Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:09,843 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 15:05:10,519 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Aomori
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:10,519 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Okayama
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:10,519 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Hakodate
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:10,520 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Iwate
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:10,520 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Shikoku
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:10,520 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Okinawa
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:10,520 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Wakayama
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:05:10,520 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | Connection failed for environment : Chugoku
+                    Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:48,544 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 15:08:50,234 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Aomori
+Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:50,235 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Okayama
+Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:50,235 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Hakodate
+Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:50,235 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Iwate
+Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:50,235 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Shikoku
+Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:50,236 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Okinawa
+Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:50,236 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Wakayama
+Description : DPY-4027: no configuration directory specified
+2026-10-14 15:08:50,236 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+Connection failed for environment : Chugoku
+Description : DPY-4027: no configuration directory specified
