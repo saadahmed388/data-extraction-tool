@@ -1,8 +1,8 @@
-from PyQt5.QtCore import QObject, QThread, pyqtSignal
+from PyQt5.QtCore import QObject, pyqtSignal
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import os
 import pandas as pd
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 

@@ -1,0 +1,14 @@
+# Environments
+.env
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Custom project folders
+removables/
+build/

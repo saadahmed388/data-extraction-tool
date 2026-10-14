@@ -1,7 +1,7 @@
 # ---------------- ui/queries_view.py ----------------
 from PyQt5.QtWidgets import (
-    QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QInputDialog, QComboBox, QListView,
-    QMessageBox, QTableWidget, QTableWidgetItem, QFrame, QDialog, QStyle, QHeaderView, QHBoxLayout, QApplication
+    QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QComboBox, QListView,
+    QMessageBox, QStyle, QHBoxLayout
 )
 from PyQt5.QtCore import Qt
 from utilities.sql_formatting import SqlPreview

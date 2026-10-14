@@ -735,5 +735,335 @@
                 "sql_name": "VM"
             }
         ]
+    },
+    {
+        "sr_num": "6400",
+        "config": "Hikita San Config 1",
+        "date_extracted": "2026-10-05 03:49:07",
+        "extraction_log": [
+            {
+                "env": "Okayama",
+                "error": "'Okayama'"
+            },
+            {
+                "env": "Aomori",
+                "error": "'Aomori'"
+            },
+            {
+                "env": "Hakodate",
+                "error": "'Hakodate'"
+            },
+            {
+                "env": "Chugoku",
+                "error": "'Chugoku'"
+            },
+            {
+                "env": "Okayama",
+                "error": "'Okayama'"
+            },
+            {
+                "env": "Aomori",
+                "error": "'Aomori'"
+            },
+            {
+                "env": "Hakodate",
+                "error": "'Hakodate'"
+            },
+            {
+                "env": "Chugoku",
+                "error": "'Chugoku'"
+            }
+        ]
+    },
+    {
+        "sr_num": "6400",
+        "config": "Hikita San Config 1",
+        "date_extracted": "2026-10-05 03:51:30",
+        "extraction_log": [
+            {
+                "env": "Aomori",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            },
+            {
+                "env": "Hakodate",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            },
+            {
+                "env": "Okayama",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            },
+            {
+                "env": "Chugoku",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            },
+            {
+                "env": "Aomori",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            },
+            {
+                "env": "Okayama",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            },
+            {
+                "env": "Chugoku",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            },
+            {
+                "env": "Hakodate",
+                "error": "'NoneType' object has no attribute 'cursor'"
+            }
+        ]
+    },
+    {
+        "sr_num": "6400",
+        "config": "Hikita San Config 1",
+        "date_extracted": "2026-10-05 04:49:28",
+        "extraction_log": [
+            {
+                "env": "Hakodate",
+                "record_count": 2481,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 14639,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Okayama",
+                "record_count": 20284,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Hakodate",
+                "record_count": 9446,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 22130,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Okayama",
+                "record_count": 47897,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 60390,
+                "sql_name": "CM New Conditions"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 1399726,
+                "sql_name": "VM"
+            }
+        ]
+    },
+    {
+        "sr_num": "6427",
+        "config": "Hikita San Config 1",
+        "date_extracted": "2026-10-12 22:09:42",
+        "extraction_log": [
+            {
+                "env": "Hakodate",
+                "record_count": 2483,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 14639,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Okayama",
+                "record_count": 20286,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Hakodate",
+                "record_count": 9456,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 22161,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Okayama",
+                "record_count": 47944,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 60395,
+                "sql_name": "CM New Conditions"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 1399761,
+                "sql_name": "VM"
+            }
+        ]
+    },
+    {
+        "sr_num": "6428",
+        "config": "Hikita San Config 2",
+        "date_extracted": "2026-10-13 22:43:03",
+        "extraction_log": [
+            {
+                "env": "Okinawa",
+                "record_count": 10457,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 11733,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Wakayama",
+                "record_count": 8592,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 17615,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Wakayama",
+                "record_count": 9587,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Okinawa",
+                "record_count": 8292,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 21556,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 33418,
+                "sql_name": "VM"
+            }
+        ]
+    },
+    {
+        "sr_num": "6430",
+        "config": "Ikezawa SR",
+        "date_extracted": "2026-10-13 22:48:20",
+        "extraction_log": [
+            {
+                "env": "Shikoku",
+                "record_count": 109317,
+                "sql_name": "VM Ikezawa"
+            },
+            {
+                "env": "Wakayama",
+                "record_count": 86154,
+                "sql_name": "VM Ikezawa"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 99000,
+                "sql_name": "VM Ikezawa"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 111779,
+                "sql_name": "VM Ikezawa"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 2427929,
+                "sql_name": "VM Ikezawa"
+            }
+        ]
+    },
+    {
+        "sr_num": "6430",
+        "config": "Ikezawa SR",
+        "date_extracted": "2026-10-13 22:54:24",
+        "extraction_log": [
+            {
+                "env": "Iwate",
+                "record_count": 11930,
+                "sql_name": "CM Ikezawa"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 17620,
+                "sql_name": "CM Ikezawa"
+            },
+            {
+                "env": "Wakayama",
+                "record_count": 8739,
+                "sql_name": "CM Ikezawa"
+            },
+            {
+                "env": "Aomori",
+                "record_count": 14640,
+                "sql_name": "CM Ikezawa"
+            },
+            {
+                "env": "Chugoku",
+                "record_count": 1684108,
+                "sql_name": "CM Ikezawa"
+            }
+        ]
+    },
+    {
+        "sr_num": "5908",
+        "config": "Hikita San Config 2",
+        "date_extracted": "2026-10-14 17:21:40",
+        "extraction_log": [
+            {
+                "env": "Wakayama",
+                "record_count": 8592,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 11733,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Okinawa",
+                "record_count": 10457,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 17619,
+                "sql_name": "CM Old Conditions"
+            },
+            {
+                "env": "Wakayama",
+                "record_count": 9590,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Okinawa",
+                "record_count": 8292,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Iwate",
+                "record_count": 21563,
+                "sql_name": "VM"
+            },
+            {
+                "env": "Shikoku",
+                "record_count": 33431,
+                "sql_name": "VM"
+            }
+        ]
     }
 ]

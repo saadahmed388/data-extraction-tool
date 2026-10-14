@@ -1,7 +1,8 @@
-import json
-import os
 from PyQt5.QtCore import QObject, pyqtSignal
 from datetime import datetime 
+
+import json
+import os
 
 class QueryManager(QObject):
     queries_updated = pyqtSignal()

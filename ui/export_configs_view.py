@@ -1,10 +1,8 @@
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QInputDialog,
-    QMessageBox, QTableWidget, QTableWidgetItem, QFrame, QDialog, QStyle, QHeaderView, QHBoxLayout, QApplication
+    QMessageBox, QStyle, QHBoxLayout,
 )
-from PyQt5.QtCore import Qt
-from utilities.sql_formatting import SqlPreview
-from datetime import datetime
+
 from utilities.checkable_box import CheckableComboBox
 from utilities.utils import TreePopUp, LogViewer
 

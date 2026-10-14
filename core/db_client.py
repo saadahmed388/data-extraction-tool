@@ -25,26 +25,21 @@ class DBClient:
         self.conn = oracledb.connect(user=self.user, password=self.password, dsn=self.dsn)
 
     def execute_select(self, sql, bind_vars=None):
-        cursor = self.conn.cursor()
-        try:
-            if bind_vars:
-                cursor.execute(sql, bind_vars)
-            else:
-                cursor.execute(sql)
-            cols = [col[0] for col in cursor.description]
-            rows = cursor.fetchall()
-            return rows, cols
-            
-        finally:
-            cursor.close()
+        with self.pool.acquire() as conn:
+            with conn.cursor() as cursor:
+                if bind_vars:
+                    cursor.execute(sql, bind_vars)
+                else:
+                    cursor.execute(sql)
+                cols = [col[0] for col in cursor.description]
+                rows = cursor.fetchall()
+                return rows, cols
 
     def execute_dml(self, sql, bind_vars):
-        cursor = self.conn.cursor()
-        try:
-            cursor.execute(sql, bind_vars)
-            return cursor.rowcount
-        finally:
-            cursor.close()
+        with self.pool.acquire() as conn:
+            with conn.cursor() as cursor:
+                cursor.execute(sql, bind_vars)
+                return cursor.rowcount
 
     def commit(self):
         self.conn.commit()

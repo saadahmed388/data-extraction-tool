@@ -1,12 +1,9 @@
 from PyQt5.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QListWidget, QTreeWidget, QStackedWidget, QListView,
-    QPushButton, QTextEdit, QListWidgetItem, QTableWidget, QComboBox, QTreeWidget, QInputDialog, QTreeWidgetItem
+    QWidget, QVBoxLayout, QHBoxLayout, QListWidget, QTreeWidget, QListView,
+    QPushButton, QListWidgetItem, QComboBox, QTreeWidget, QInputDialog, QTreeWidgetItem
 )
-from PyQt5.QtCore import QObject, pyqtSignal, Qt
+from PyQt5.QtCore import Qt
 from core.managers.query_manager import QueryManager
-import json
-import os
-
 
 class PresetsTab(QWidget):
     def __init__(self, query_manager: QueryManager, db_configs_manager, styling_manager, presets_manager):

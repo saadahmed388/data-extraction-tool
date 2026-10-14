@@ -1,15 +1,17 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QInputDialog, QComboBox, QListView, QLabel, QDialogButtonBox, QMessageBox, QTableWidget, QTableWidgetItem, QFrame, QDialog, QStyle, QHeaderView, QHBoxLayout, QApplication
+from PyQt5.QtWidgets import (
+    QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QComboBox, 
+    QListView, QLabel, QDialogButtonBox, QMessageBox, QDialog, QStyle, QHBoxLayout
+)
 from PyQt5.QtCore import Qt, QTimer, QThread
-from utilities.sql_formatting import SqlPreview
 from utilities.custom_widgets import StyledInputDialog
-from datetime import datetime
-from utilities.utils import CheckableComboBox, LogViewer, TreePopUp
-import regex as re
-from datetime import datetime
-import os
-import time
+from utilities.utils import LogViewer, TreePopUp
 from utilities.executables import ExtractionWorker
+
+from datetime import datetime
+import regex as re
 import logging
+import time
+import os
 
 logger = logging.getLogger(__name__)
 

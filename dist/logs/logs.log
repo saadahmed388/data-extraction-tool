@@ -34,3 +34,93 @@
 2026-09-03 18:52:16,892 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Okinawa pool OK
 2026-09-03 18:52:16,954 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Wakayama pool OK
 2026-09-03 18:52:17,003 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:99  | Chugoku pool OK
+2026-10-14 14:21:46,293 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 14:21:47,070 | ERROR | MainThread | __main__ | app.py:23  | Unhandled Exception
+Traceback (most recent call last):
+  File "app.py", line 19, in <module>
+  File "ui\main_window.py", line 28, in __init__
+  File "core\managers\connection_manager.py", line 20, in __init__
+  File "core\managers\connection_manager.py", line 85, in connect_all
+  File "core\db_client.py", line 10, in __init__
+  File "core\db_client.py", line 13, in get_pool
+  File "oracledb\pool.py", line 626, in create_pool
+  File "oracledb\pool.py", line 73, in __init__
+  File "src/oracledb/impl/base/connect_params.pyx", line 599, in oracledb.base_impl.ConnectParamsImpl.process_args
+  File "src/oracledb/impl/base/connect_params.pyx", line 534, in oracledb.base_impl.ConnectParamsImpl.parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 532, in oracledb.base_impl.ConnectParamsImpl.parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 372, in oracledb.base_impl.ConnectParamsImpl._parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 1296, in oracledb.base_impl.TnsnamesFileReader.read_tnsnames
+  File "oracledb\errors.py", line 215, in _raise_err
+oracledb.exceptions.DatabaseError: DPY-4027: no configuration directory specified
+2026-10-14 14:21:55,676 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 14:21:56,338 | ERROR | MainThread | __main__ | app.py:23  | Unhandled Exception
+Traceback (most recent call last):
+  File "app.py", line 19, in <module>
+  File "ui\main_window.py", line 28, in __init__
+  File "core\managers\connection_manager.py", line 20, in __init__
+  File "core\managers\connection_manager.py", line 85, in connect_all
+  File "core\db_client.py", line 10, in __init__
+  File "core\db_client.py", line 13, in get_pool
+  File "oracledb\pool.py", line 626, in create_pool
+  File "oracledb\pool.py", line 73, in __init__
+  File "src/oracledb/impl/base/connect_params.pyx", line 599, in oracledb.base_impl.ConnectParamsImpl.process_args
+  File "src/oracledb/impl/base/connect_params.pyx", line 534, in oracledb.base_impl.ConnectParamsImpl.parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 532, in oracledb.base_impl.ConnectParamsImpl.parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 372, in oracledb.base_impl.ConnectParamsImpl._parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 1296, in oracledb.base_impl.TnsnamesFileReader.read_tnsnames
+  File "oracledb\errors.py", line 215, in _raise_err
+oracledb.exceptions.DatabaseError: DPY-4027: no configuration directory specified
+2026-10-14 14:22:06,639 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 14:22:07,275 | ERROR | MainThread | __main__ | app.py:23  | Unhandled Exception
+Traceback (most recent call last):
+  File "app.py", line 19, in <module>
+  File "ui\main_window.py", line 28, in __init__
+  File "core\managers\connection_manager.py", line 20, in __init__
+  File "core\managers\connection_manager.py", line 85, in connect_all
+  File "core\db_client.py", line 10, in __init__
+  File "core\db_client.py", line 13, in get_pool
+  File "oracledb\pool.py", line 626, in create_pool
+  File "oracledb\pool.py", line 73, in __init__
+  File "src/oracledb/impl/base/connect_params.pyx", line 599, in oracledb.base_impl.ConnectParamsImpl.process_args
+  File "src/oracledb/impl/base/connect_params.pyx", line 534, in oracledb.base_impl.ConnectParamsImpl.parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 532, in oracledb.base_impl.ConnectParamsImpl.parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 372, in oracledb.base_impl.ConnectParamsImpl._parse_connect_string
+  File "src/oracledb/impl/base/connect_params.pyx", line 1296, in oracledb.base_impl.TnsnamesFileReader.read_tnsnames
+  File "oracledb\errors.py", line 215, in _raise_err
+oracledb.exceptions.DatabaseError: DPY-4027: no configuration directory specified
+2026-10-14 14:30:41,692 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 14:30:56,046 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 14:37:17,289 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 14:42:21,679 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-10-14 14:42:22,289 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Aomori
+                    Description : DPY-4027: no configuration directory specified
+                
+2026-10-14 14:42:22,290 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Okayama
+                    Description : DPY-4027: no configuration directory specified
+                
+2026-10-14 14:42:22,290 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Hakodate
+                    Description : DPY-4027: no configuration directory specified
+                
+2026-10-14 14:42:22,290 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Iwate
+                    Description : DPY-4027: no configuration directory specified
+                
+2026-10-14 14:42:22,291 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Shikoku
+                    Description : DPY-4027: no configuration directory specified
+                
+2026-10-14 14:42:22,291 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Okinawa
+                    Description : DPY-4027: no configuration directory specified
+                
+2026-10-14 14:42:22,291 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Wakayama
+                    Description : DPY-4027: no configuration directory specified
+                
+2026-10-14 14:42:22,291 | CRITICAL | MainThread | core.managers.connection_manager | connection_manager.py:98  | 
+                    Connection failed for environment : Chugoku
+                    Description : DPY-4027: no configuration directory specified
+                

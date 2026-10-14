@@ -4,19 +4,19 @@
             "Hikita San VM SR Part 1",
             "Hikita San CM SR Part 1"
         ],
-        "extracted_on": "2026-04-13 19:34:37"
+        "extracted_on": "2026-10-12 22:09:42"
     },
     "Ikezawa SR": {
         "preset_list": [
-            "Ikezawa San VM SR"
+            "Ikezawa San CM SR"
         ],
-        "extracted_on": "2026-01-11 05:25:02"
+        "extracted_on": "2026-10-13 22:54:25"
     },
     "Hikita San Config 2": {
         "preset_list": [
             "Hikita San VM SR Part 2",
             "Hikita San CM SR Part 2"
         ],
-        "extracted_on": "2026-04-13 18:10:29"
+        "extracted_on": "2026-10-14 17:21:40"
     }
 }

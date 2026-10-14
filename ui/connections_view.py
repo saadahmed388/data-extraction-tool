@@ -1,12 +1,11 @@
 from __future__ import annotations
 
 from PyQt5.QtWidgets import (
-    QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QInputDialog,
-    QMessageBox, QTableWidget, QTableWidgetItem, QFrame, QDialog, QStyle, QHeaderView, QHBoxLayout, QApplication
+    QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem,
+    QMessageBox, QHBoxLayout, QApplication
 )
 from utilities.custom_widgets import StyledInputDialog
 from PyQt5.QtCore import Qt
-from core.db_client import DBClient
 import logging
 
 from typing import TYPE_CHECKING

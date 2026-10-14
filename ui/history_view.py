@@ -1,10 +1,8 @@
 from PyQt5.QtWidgets import (
-    QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QInputDialog,
-    QMessageBox, QTableWidget, QTableWidgetItem, QFrame, QDialog, QStyle, QHeaderView, QHBoxLayout, QApplication
+    QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem,
+    QMessageBox, QTableWidget, QTableWidgetItem, QDialog, QStyle
 )
-import json
-import os
-import uuid
+
 from utilities.utils import LogViewer
 
 class HistoryTab(QWidget):
