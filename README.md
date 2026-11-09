@@ -1,302 +1,222 @@
+
 # Data Extraction Tool
 
-> A desktop database extraction application for retrieving environment-specific operational data through reusable SQL queries and exporting the results into structured outputs.
+> A Python-based desktop application for managing, executing, and exporting environment-specific data extraction workflows across multiple Oracle database environments.
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![GUI](https://img.shields.io/badge/GUI-PyQt5-41CD52.svg)](https://www.qt.io/qt-for-python)
-[![Database](https://img.shields.io/badge/Database-Oracle-red.svg)](https://www.oracle.com/database/)
-[![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![PyQt5](https://img.shields.io/badge/GUI-PyQt5-green)
+![Oracle](https://img.shields.io/badge/Business%20Backend-Oracle-red)
+![PostgreSQL](https://img.shields.io/badge/Application%20Backend-PostgreSQL-336791)
+![License](https://img.shields.io/badge/License-Apache--2.0-green)
 
 ## Overview
 
-The **Data Extraction Tool** is a Python-based desktop application for extracting environment-specific data from Oracle databases using reusable, predefined SQL queries and exporting the results in structured formats.
+The **Data Extraction Tool** is a Python-based desktop application designed to simplify and standardize data extraction workflows across multiple Oracle environments.
 
-It is designed around a repeatable extraction workflow:
+It provides a centralized interface for managing database connections, maintaining reusable SQL queries, configuring extraction presets, executing extraction workflows, and generating structured outputs.
 
-```text
-Configure Environment
-       ↓
-Select / Define Query
-       ↓
-Execute Extraction
-       ↓
-Inspect Results
-       ↓
-Apply Export Configuration
-       ↓
-Generate Structured Output
-       ↓
-Persist Extraction History
-```
-
-The application uses **PyQt5** for the desktop interface and `oracledb` for Oracle connectivity, with dedicated components for connections, queries, presets, export configuration, extraction history, staging, and output management.
+Version 2.0 introduces PostgreSQL as the centralized application persistence backend, replacing the previous JSON-based persistence approach.
 
 ## Key Features
 
-### 🗄️ Environment-Aware Database Extraction
-- Connect to configured database environments.
-- Keep database access isolated in the core database layer.
-- Execute reusable SQL queries against the selected environment.
-- Support environment-specific extraction workflows.
+### 🗄️ Environment-Aware Database Connectivity
+- Manage multiple Oracle database environments.
+- Maintain environment-specific connection configurations.
+- Use Oracle connection pooling for efficient database access.
+- Execute extraction queries against selected environments.
 
 ### 🔍 Query Management
-- Create and maintain reusable SQL queries.
-- Store query metadata such as creation/modification timestamps.
-- Delete obsolete queries.
-- Load query definitions from persistent JSON storage.
+- Create, update, and organize reusable SQL queries.
+- Maintain query classifications and metadata.
+- Associate queries with extraction environments.
 
-### 📤 Configurable Export
-- Define reusable export configurations.
-- Create named extraction/export definitions.
-- Track when an extraction was performed.
-- Store extraction-related logging information.
-- Separate extraction configuration from the extraction engine.
+### ⚙️ Presets & Export Configurations
+- Create reusable extraction presets.
+- Combine queries and environments into configurable workflows.
+- Organize presets into named export configurations.
+- Associate Service Requests with their respective extraction configurations.
 
-### 📚 Presets & History
-- Maintain reusable presets.
-- Keep extraction history for operational traceability.
-- Store configuration locally in JSON-based application data.
+### 📤 Extraction & Export
+- Execute configured extraction workflows.
+- Run extraction operations in background threads.
+- Generate structured output files.
+- Capture extraction execution details and results.
 
-### 🖥️ Desktop UI
-The application includes dedicated views for:
-- Database connections
-- Queries
-- Results
-- Export configuration
-- Export execution
-- Presets
-- Extraction history
+### 📚 Persistent History
+- Maintain Service Request and extraction records.
+- Persist execution reports and extraction metadata.
+- Retrieve historical execution information through the application interface.
 
 ## Architecture
 
+The application follows a **three-layer architecture**, separating presentation, application logic, and data infrastructure.
+
 ```mermaid
-flowchart TD
-    A[PyQt5 Desktop UI] --> B[Main Window]
-    B --> C[Connection Manager]
-    B --> D[Query Manager]
-    B --> E[Export Manager]
-    B --> F[Preset Manager]
-    B --> G[History Manager]
+flowchart TB
+    U[User]
 
-    C --> H[Database Client]
-    D --> H
-    H --> I[(Oracle Database)]
+    subgraph L1["1. Presentation Layer"]
+        UI[PyQt5 Desktop UI]
+        V[Connections | Queries | Presets]
+        W[Export Configurations | Service Requests | History]
+    end
 
-    D --> J[Query / Template Layer]
-    E --> K[Export Configuration]
-    E --> L[Structured Output]
-    G --> M[Extraction History]
+    subgraph L2["2. Application Layer"]
+        M[Application Managers]
+        D[Data Models and Validation]
+        E[Extraction Workflow and Orchestration]
+        X[Background Execution]
+    end
+
+    subgraph L3["3. Data / Infrastructure Layer"]
+        OC[Oracle DB Client]
+        OP[Oracle Connection Pool]
+        PM[PostgreSQL Managers]
+        PG[PostgreSQL Connection Pool]
+    end
+
+    ORA[(Oracle Database<br/>Business Data)]
+    POST[(PostgreSQL Database<br/>Application Data)]
+    FS[(Export Files)]
+
+    U --> UI
+    UI --> V
+    UI --> W
+    V --> M
+    W --> M
+    M --> D
+    M --> E
+    E --> X
+    X --> OC
+    OC --> OP
+    OP --> ORA
+    M --> PM
+    PM --> PG
+    PG --> POST
+    X --> FS
 ```
+
+### Layer Responsibilities
+
+| Layer | Responsibility |
+|---|---|
+| **Presentation** | PyQt5 interface, application views, user interactions, and visualization of extraction results. |
+| **Application** | Business workflows, application managers, configuration coordination, data validation, and extraction orchestration. |
+| **Data / Infrastructure** | Oracle connectivity, PostgreSQL persistence, connection pooling, and database access operations. |
+
+### Database Architecture
+
+The application uses two databases with clearly separated responsibilities:
+
+**PostgreSQL — Application Backend**
+- Sole active persistence backend.
+- Stores database connection configurations and metadata.
+- Maintains queries, presets, and export configurations.
+- Persists Service Request records and extraction history.
+
+**Oracle — Business Backend**
+- Source of business and operational data.
+- Executes configured SQL extraction queries.
+- Supports multiple database environments through independent connection pools.
+
+This separation keeps application metadata independent of the business databases being queried.
 
 ## Component Responsibilities
 
 | Component | Responsibility |
 |---|---|
-| `ui/` | Desktop screens and user interaction |
-| `core/db_client.py` | Database communication |
-| `core/db_config_manager.py` | Database/environment configuration |
-| `core/query_manager.py` | Query persistence and lifecycle |
-| `core/export_manager.py` | Export definitions and metadata |
-| `core/export_configuration_manager.py` | Export configuration management |
-| `core/preset_manager.py` | Reusable extraction presets |
-| `core/history_manager.py` | Extraction history |
-| `core/query_class_manager.py` | Query classification/organization |
-| `core/staging.py` | Intermediate extraction/staging logic |
-| `core/template_engine.py` | Template processing |
-| `config/` | Application configuration |
-| `data_and_config_files/` | Local persistent application data |
-| `utilities/` | Supporting utilities and logging |
-| `assets/` | Application resources |
-
-## Project Structure
-
-```text
-data-extraction-tool/
-│
-├── app.py
-├── requirements.txt
-│
-├── core/
-│   ├── db_client.py
-│   ├── db_client_old.py
-│   ├── db_config_manager.py
-│   ├── export_configuration_manager.py
-│   ├── export_manager.py
-│   ├── history_manager.py
-│   ├── preset_manager.py
-│   ├── query_class_manager.py
-│   ├── query_manager.py
-│   ├── staging.py
-│   ├── template_engine.py
-│   └── managers/
-│       ├── connection_manager.py
-│       ├── export_configuration_manager.py
-│       ├── export_manager.py
-│       ├── history_manager.py
-│       ├── preset_manager.py
-│       ├── query_class_manager.py
-│       └── query_manager.py
-│
-├── ui/
-│   ├── main_window.py
-│   ├── connections_view.py
-│   ├── export_configs_view.py
-│   ├── export_view.py
-│   ├── history_view.py
-│   ├── presets_view.py
-│   ├── queries_view.py
-│   └── results_view.py
-│
-├── config/
-├── data_and_config_files/
-├── utilities/
-├── assets/
-├── logs/
-├── build/
-└── dist/
-```
+| `ui/` | PyQt5 views and user interactions. |
+| `core/managers/` | Application-level managers coordinating configurations, queries, presets, exports, and history. |
+| `core/postgres_managers/` | PostgreSQL persistence operations for application entities. |
+| `core/postgres_managers/db_manager.py` | PostgreSQL connection pool and connection lifecycle management. |
+| `core/db_client.py` | Oracle database connectivity, connection pooling, and SQL execution. |
+| `core/data_models.py` | Pydantic models for structured application operation payloads. |
+| `core/exceptions.py` | Application-specific exception definitions. |
+| `utilities/` | Background extraction workers, logging, UI utilities, and supporting components. |
+| `config/` | Application configuration. |
+| `assets/` | Application icons and graphical resources. |
+| `logs/` | Application execution and diagnostic logs. |
+| `app.py` | Application entry point and initialization. |
 
 ## Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Python | Application logic |
-| PyQt5 | Desktop GUI |
-| `oracledb` | Oracle database connectivity |
-| Pandas | Data manipulation and tabular processing |
-| `regex` | Pattern matching and parsing |
-| JSON | Local configuration and state |
-| PyInstaller | Desktop packaging |
-
-The authoritative dependency list is maintained in `requirements.txt`.
+| Python | Core application logic |
+| PyQt5 | Desktop interface |
+| PostgreSQL | Application persistence |
+| psycopg2 | PostgreSQL connectivity and pooling |
+| python-oracledb | Oracle connectivity and pooling |
+| Pydantic | Data validation and structured payloads |
+| Pandas | Dataset processing |
+| PyInstaller | Desktop application packaging |
 
 ## Installation
 
 ### Prerequisites
 
 - Python 3.x
-- Oracle database access
-- Valid credentials for the required environment(s)
-- Windows if using the packaged desktop distribution
+- PostgreSQL database
+- Access to the required Oracle environments
+- Valid database credentials
 
-### Clone
+### Clone Repository
 
 ```bash
 git clone https://github.com/saadahmed388/data-extraction-tool.git
 cd data-extraction-tool
 ```
 
-### Create a virtual environment
+### Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-Windows:
+Activate on Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-### Install dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run
+### Configure PostgreSQL
+
+Configure the PostgreSQL connection using the `DATABASE_URL` environment variable.
+
+```env
+DATABASE_URL=postgresql://username:password@localhost:5432/database_name
+```
+
+Ensure the required application schema and database objects are provisioned.
+
+### Run Application
 
 ```bash
 python app.py
 ```
 
-On startup, the application initializes logging, creates the PyQt5 application instance, loads the main window, and enters the GUI event loop.
+Configure the required Oracle environments through the application before executing extraction workflows.
 
-## Typical Usage
+## Project Status
 
-### 1. Configure a database environment
+**v2.0.0 — PostgreSQL Backend Integration**
 
-Provide the connection information required by the application's database configuration layer.
+Introduces centralized PostgreSQL persistence, dedicated persistence managers, structured Pydantic payloads, and pooled database connectivity.
 
-### 2. Create or select a query
-
-Queries are stored as reusable definitions rather than requiring the operator to repeatedly enter SQL.
-
-### 3. Execute the extraction
-
-Run the selected query against the intended environment.
-
-### 4. Review the results
-
-Inspect the extracted records in the results view before producing the final output.
-
-### 5. Apply export configuration
-
-Select the required export configuration/preset and generate the desired structured output.
-
-### 6. Review extraction history
-
-Use the history view to understand previous extraction activity.
-
-## Data & Configuration
-
-The application uses JSON-backed local state for several operational entities, including queries and export definitions.
-
-For example, the export manager persists named exports with metadata such as:
-
-```json
-{
-  "config_name": "",
-  "extracted_on": "No Extractions Yet",
-  "extraction_log": ""
-}
-```
-
-This makes configurations reusable while keeping the extraction engine separate from the presentation layer.
-
-## Design Principles
-
-### Reusability
-
-Queries and export configurations are persisted so common extraction jobs do not have to be rebuilt from scratch.
-
-### Separation of Concerns
-
-Database connectivity, query management, export configuration, history, and UI presentation are separated into dedicated components.
-
-### Environment Awareness
-
-The database layer is designed around configured environments, reducing the risk of treating different database targets as interchangeable.
-
-### Traceability
-
-Extraction definitions and history provide a record of operational extraction activity.
-
-## Security Considerations
-
-The application can connect to enterprise databases. Before using it with sensitive environments:
-
-- Never commit credentials to Git.
-- Use least-privilege database accounts.
-- Restrict access to configuration files containing connection information.
-- Validate the selected environment before extraction.
-- Avoid exporting sensitive data to uncontrolled locations.
-- Review generated exports before sharing them.
-
-## Packaging
-
-The repository contains PyInstaller/build artifacts and an application specification. Packaging should follow the existing project spec/build configuration.
-
-## Logging
-
-Application startup and unhandled exceptions are logged through the configured logging utility. This provides an operational trail for troubleshooting failed extraction runs.
+Further development includes UI refinement, completion of extraction history, and continued improvements to application reliability and maintainability.
 
 ## License
 
-This project is licensed under the **Apache License 2.0**. See [LICENSE](LICENSE).
+This project is licensed under the [Apache License 2.0](LICENSE).
 
 ## Author
 
 **Saad Ahmed**
 
-GitHub: https://github.com/saadahmed388
+[GitHub](https://github.com/saadahmed388)
