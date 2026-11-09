@@ -31,7 +31,7 @@ class ExtractionWorker(QObject):
         with ThreadPoolExecutor(max_workers=8) as executor:
             for preset in self.preset_list:
                 for item in self.presets[preset]:
-                    if self._is_running and item['active']:
+                    if self._is_running:
                         future = executor.submit(
                             self.process_item, 
                             item, 

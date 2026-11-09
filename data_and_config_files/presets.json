@@ -1,254 +1,197 @@
 {
     "Hikita San VM SR Part 1": [
         {
-            "active": true,
+            "preset_id": "f2c3c64f-3d05-4c84-ab46-6163c98433c8",
             "env": "Okayama",
-            "sql": "VM"
+            "env_id": "781624d1-8455-4cd9-9265-fda9546b68db",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
         },
         {
-            "active": true,
+            "preset_id": "f2c3c64f-3d05-4c84-ab46-6163c98433c8",
             "env": "Aomori",
-            "sql": "VM"
+            "env_id": "4447c877-42be-4010-987e-8dcc87144b23",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
         },
         {
-            "active": true,
+            "preset_id": "f2c3c64f-3d05-4c84-ab46-6163c98433c8",
             "env": "Hakodate",
-            "sql": "VM"
+            "env_id": "495eb2fd-4409-41f4-a461-5d795afb8bf6",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
         },
         {
-            "active": false,
-            "env": "Iwate",
-            "sql": "VM"
-        },
-        {
-            "active": false,
-            "env": "Shikoku",
-            "sql": "VM"
-        },
-        {
-            "active": false,
-            "env": "Okinawa",
-            "sql": "VM"
-        },
-        {
-            "active": false,
-            "env": "Wakayama",
-            "sql": "VM"
-        },
-        {
-            "active": true,
+            "preset_id": "f2c3c64f-3d05-4c84-ab46-6163c98433c8",
             "env": "Chugoku",
-            "sql": "VM"
-        }
-    ],
-    "Hikita San CM SR Part 1": [
-        {
-            "active": true,
-            "env": "Okayama",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Aomori",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Hakodate",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Iwate",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Shikoku",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Okinawa",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Wakayama",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Chugoku",
-            "sql": "CM New Conditions"
-        }
-    ],
-    "Ikezawa San CM SR": [
-        {
-            "active": false,
-            "env": "Okayama",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Aomori",
-            "sql": "CM Ikezawa"
-        },
-        {
-            "active": false,
-            "env": "Hakodate",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Iwate",
-            "sql": "CM Ikezawa"
-        },
-        {
-            "active": true,
-            "env": "Shikoku",
-            "sql": "CM Ikezawa"
-        },
-        {
-            "active": false,
-            "env": "Okinawa",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Wakayama",
-            "sql": "CM Ikezawa"
-        },
-        {
-            "active": true,
-            "env": "Chugoku",
-            "sql": "CM Ikezawa"
-        }
-    ],
-    "Ikezawa San VM SR": [
-        {
-            "active": false,
-            "env": "Okayama",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Aomori",
-            "sql": "VM Ikezawa"
-        },
-        {
-            "active": false,
-            "env": "Hakodate",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Iwate",
-            "sql": "VM Ikezawa"
-        },
-        {
-            "active": true,
-            "env": "Shikoku",
-            "sql": "VM Ikezawa"
-        },
-        {
-            "active": false,
-            "env": "Okinawa",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
-            "env": "Wakayama",
-            "sql": "VM Ikezawa"
-        },
-        {
-            "active": true,
-            "env": "Chugoku",
-            "sql": "VM Ikezawa"
+            "env_id": "e36fe5a6-995f-4347-a987-a322d058ff10",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
         }
     ],
     "Hikita San VM SR Part 2": [
         {
-            "active": false,
-            "env": "Okayama",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Aomori",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Hakodate",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
+            "preset_id": "f3a43ec4-95c3-498f-b8b3-70b52525f0d5",
             "env": "Iwate",
-            "sql": "VM"
+            "env_id": "f24561ec-d29d-4d67-ac28-bace7907caf0",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
         },
         {
-            "active": true,
+            "preset_id": "f3a43ec4-95c3-498f-b8b3-70b52525f0d5",
             "env": "Shikoku",
-            "sql": "VM"
+            "env_id": "5cc834f4-4414-476e-8489-9e33e6410eb1",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
         },
         {
-            "active": true,
+            "preset_id": "f3a43ec4-95c3-498f-b8b3-70b52525f0d5",
             "env": "Okinawa",
-            "sql": "VM"
+            "env_id": "7c53ee9a-01c0-4c02-8260-91715e51efe1",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
         },
         {
-            "active": true,
+            "preset_id": "f3a43ec4-95c3-498f-b8b3-70b52525f0d5",
             "env": "Wakayama",
-            "sql": "VM"
+            "env_id": "a594f651-7033-4bc0-bb30-740a1ac613d6",
+            "sql": "VM",
+            "sql_id": "c0124f38-9b35-4b85-bb89-17a52e072853"
+        }
+    ],
+    "Ikezawa San CM SR": [
+        {
+            "preset_id": "db7faf2f-8243-4c49-841b-b74cb0e81c8c",
+            "env": "Aomori",
+            "env_id": "4447c877-42be-4010-987e-8dcc87144b23",
+            "sql": "CM Ikezawa",
+            "sql_id": "32f25cc7-989d-4a8c-9183-c3a040162235"
         },
         {
-            "active": false,
+            "preset_id": "db7faf2f-8243-4c49-841b-b74cb0e81c8c",
+            "env": "Iwate",
+            "env_id": "f24561ec-d29d-4d67-ac28-bace7907caf0",
+            "sql": "CM Ikezawa",
+            "sql_id": "32f25cc7-989d-4a8c-9183-c3a040162235"
+        },
+        {
+            "preset_id": "db7faf2f-8243-4c49-841b-b74cb0e81c8c",
+            "env": "Shikoku",
+            "env_id": "5cc834f4-4414-476e-8489-9e33e6410eb1",
+            "sql": "CM Ikezawa",
+            "sql_id": "32f25cc7-989d-4a8c-9183-c3a040162235"
+        },
+        {
+            "preset_id": "db7faf2f-8243-4c49-841b-b74cb0e81c8c",
+            "env": "Wakayama",
+            "env_id": "a594f651-7033-4bc0-bb30-740a1ac613d6",
+            "sql": "CM Ikezawa",
+            "sql_id": "32f25cc7-989d-4a8c-9183-c3a040162235"
+        },
+        {
+            "preset_id": "db7faf2f-8243-4c49-841b-b74cb0e81c8c",
             "env": "Chugoku",
-            "sql": "CM Old Conditions"
+            "env_id": "e36fe5a6-995f-4347-a987-a322d058ff10",
+            "sql": "CM Ikezawa",
+            "sql_id": "32f25cc7-989d-4a8c-9183-c3a040162235"
+        }
+    ],
+    "Ikezawa San VM SR": [
+        {
+            "preset_id": "8e9b841d-09fb-433c-ad2b-0b7585145720",
+            "env": "Aomori",
+            "env_id": "4447c877-42be-4010-987e-8dcc87144b23",
+            "sql": "VM Ikezawa",
+            "sql_id": "6fe5f488-ab9b-4a24-ae7b-8946f510d7b9"
+        },
+        {
+            "preset_id": "8e9b841d-09fb-433c-ad2b-0b7585145720",
+            "env": "Iwate",
+            "env_id": "f24561ec-d29d-4d67-ac28-bace7907caf0",
+            "sql": "VM Ikezawa",
+            "sql_id": "6fe5f488-ab9b-4a24-ae7b-8946f510d7b9"
+        },
+        {
+            "preset_id": "8e9b841d-09fb-433c-ad2b-0b7585145720",
+            "env": "Shikoku",
+            "env_id": "5cc834f4-4414-476e-8489-9e33e6410eb1",
+            "sql": "VM Ikezawa",
+            "sql_id": "6fe5f488-ab9b-4a24-ae7b-8946f510d7b9"
+        },
+        {
+            "preset_id": "8e9b841d-09fb-433c-ad2b-0b7585145720",
+            "env": "Wakayama",
+            "env_id": "a594f651-7033-4bc0-bb30-740a1ac613d6",
+            "sql": "VM Ikezawa",
+            "sql_id": "6fe5f488-ab9b-4a24-ae7b-8946f510d7b9"
+        },
+        {
+            "preset_id": "8e9b841d-09fb-433c-ad2b-0b7585145720",
+            "env": "Chugoku",
+            "env_id": "e36fe5a6-995f-4347-a987-a322d058ff10",
+            "sql": "VM Ikezawa",
+            "sql_id": "6fe5f488-ab9b-4a24-ae7b-8946f510d7b9"
+        }
+    ],
+    "Hikita San CM SR Part 1": [
+        {
+            "preset_id": "9ecf9a0f-7e35-49ad-8b29-cd470804e707",
+            "env": "Chugoku",
+            "env_id": "e36fe5a6-995f-4347-a987-a322d058ff10",
+            "sql": "CM New Conditions",
+            "sql_id": "eed8d416-6994-494a-95f8-948cf0316778"
+        },
+        {
+            "preset_id": "9ecf9a0f-7e35-49ad-8b29-cd470804e707",
+            "env": "Okayama",
+            "env_id": "781624d1-8455-4cd9-9265-fda9546b68db",
+            "sql": "CM Old Conditions",
+            "sql_id": "cc6ee50e-2b78-44ce-9c77-a302231f7a29"
+        },
+        {
+            "preset_id": "9ecf9a0f-7e35-49ad-8b29-cd470804e707",
+            "env": "Aomori",
+            "env_id": "4447c877-42be-4010-987e-8dcc87144b23",
+            "sql": "CM Old Conditions",
+            "sql_id": "cc6ee50e-2b78-44ce-9c77-a302231f7a29"
+        },
+        {
+            "preset_id": "9ecf9a0f-7e35-49ad-8b29-cd470804e707",
+            "env": "Hakodate",
+            "env_id": "495eb2fd-4409-41f4-a461-5d795afb8bf6",
+            "sql": "CM Old Conditions",
+            "sql_id": "cc6ee50e-2b78-44ce-9c77-a302231f7a29"
         }
     ],
     "Hikita San CM SR Part 2": [
         {
-            "active": false,
-            "env": "Okayama",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Aomori",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Hakodate",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": true,
+            "preset_id": "eea311fa-eabe-4b60-bd55-8ef8c64c723e",
             "env": "Iwate",
-            "sql": "CM Old Conditions"
+            "env_id": "f24561ec-d29d-4d67-ac28-bace7907caf0",
+            "sql": "CM Old Conditions",
+            "sql_id": "cc6ee50e-2b78-44ce-9c77-a302231f7a29"
         },
         {
-            "active": true,
+            "preset_id": "eea311fa-eabe-4b60-bd55-8ef8c64c723e",
             "env": "Shikoku",
-            "sql": "CM Old Conditions"
+            "env_id": "5cc834f4-4414-476e-8489-9e33e6410eb1",
+            "sql": "CM Old Conditions",
+            "sql_id": "cc6ee50e-2b78-44ce-9c77-a302231f7a29"
         },
         {
-            "active": true,
+            "preset_id": "eea311fa-eabe-4b60-bd55-8ef8c64c723e",
             "env": "Okinawa",
-            "sql": "CM Old Conditions"
+            "env_id": "7c53ee9a-01c0-4c02-8260-91715e51efe1",
+            "sql": "CM Old Conditions",
+            "sql_id": "cc6ee50e-2b78-44ce-9c77-a302231f7a29"
         },
         {
-            "active": true,
+            "preset_id": "eea311fa-eabe-4b60-bd55-8ef8c64c723e",
             "env": "Wakayama",
-            "sql": "CM Old Conditions"
-        },
-        {
-            "active": false,
-            "env": "Chugoku",
-            "sql": "CM Old Conditions"
+            "env_id": "a594f651-7033-4bc0-bb30-740a1ac613d6",
+            "sql": "CM Old Conditions",
+            "sql_id": "cc6ee50e-2b78-44ce-9c77-a302231f7a29"
         }
-    ]
+    ],
+    "Test12": []
 }

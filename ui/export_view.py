@@ -1,29 +1,69 @@
+<<<<<<< HEAD
+=======
+from __future__ import annotations
+
+>>>>>>> 9e9615b (v2.0.0 - Major Backend Update - Postgres Integration)
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QComboBox, 
     QListView, QLabel, QDialogButtonBox, QMessageBox, QDialog, QStyle, QHBoxLayout
 )
 from PyQt5.QtCore import Qt, QTimer, QThread
 from utilities.custom_widgets import StyledInputDialog
+<<<<<<< HEAD
 from utilities.utils import LogViewer, TreePopUp
 from utilities.executables import ExtractionWorker
 
 from datetime import datetime
+=======
+from utilities.utils import LogViewer, TreePopUp, SelectorDialog
+from utilities.executables import ExtractionWorker
+
+from core.data_models import (
+    NewSRPayload, UpdateSRPayload, 
+    RemoveSRPayload, UpdateSRConfigPayload
+)
+
+from datetime import datetime
+from typing import TYPE_CHECKING, Dict
+>>>>>>> 9e9615b (v2.0.0 - Major Backend Update - Postgres Integration)
 import regex as re
 import logging
 import time
 import os
+<<<<<<< HEAD
+=======
+
+if TYPE_CHECKING:
+    from core.managers.export_manager import ExportManager
+    from core.managers.connection_manager import ConnectionManager
+    from core.managers.query_manager import QueryManager
+    from core.managers.history_manager import HistoryManager
+    from core.managers.preset_manager import PresetManager
+    from core.managers.export_configuration_manager import ExportConfigManager
+    from core.db_client import DBClient
+
+>>>>>>> 9e9615b (v2.0.0 - Major Backend Update - Postgres Integration)
 
 logger = logging.getLogger(__name__)
 
 class ExportsTab(QWidget):
-    def __init__(self, db_clients, db_config_manager, query_manager, styling_manager, history_manager, presets_manager, export_configurations_manager, export_manager):
+    def __init__(self, 
+            export_manager: ExportManager,
+            db_clients: Dict[str, DBClient], 
+            connection_manager: ConnectionManager, 
+            query_manager: QueryManager, 
+            history_manager: HistoryManager, 
+            presets_manager: PresetManager, 
+            export_configurations_manager: ExportConfigManager, 
+            styling_manager
+        ):
         super().__init__()
         self.BASE_DIR = 'exports'
         if not os.path.exists(self.BASE_DIR):
             os.makedirs(self.BASE_DIR, exist_ok = True)
         
         self.db_clients = db_clients
-        self.db_config_manager = db_config_manager
+        self.connection_manager = connection_manager
         self.styling_manager = styling_manager
         self.query_manager = query_manager
         self.presets_manager = presets_manager
@@ -47,8 +87,8 @@ class ExportsTab(QWidget):
         self.remove_sr_btn = QPushButton('Remove SR')
         self.export_btn = QPushButton('Export')
         self.new_sr_btn.clicked.connect(self.new_extraction)
-        self.modify_sr_btn.clicked.connect(self.modify_extraction)
-        self.remove_sr_btn.clicked.connect(self.remove_configuration)
+        self.modify_sr_btn.clicked.connect(self.update_extraction)
+        self.remove_sr_btn.clicked.connect(self.remove_extraction)
         self.export_btn.clicked.connect(self.perform_extraction)
         button_bar.addWidget(self.new_sr_btn)
         button_bar.addWidget(self.modify_sr_btn)
@@ -59,11 +99,11 @@ class ExportsTab(QWidget):
         self.remove_sr_btn.setStyleSheet(self.styling_manager.button_style()) 
         self.export_btn.setStyleSheet(self.styling_manager.button_style()) 
         
-        self.export_configurations = self.export_configurations_manager.get_all_configs()
-        self.presets = self.presets_manager.get_all_presets()
-        self.sr_configurations = self.export_manager.get_all_exports()
-        self.connections = self.db_config_manager.get_all_connections()
-        self.queries = self.query_manager.get_all_queries()
+        self.export_configurations = self.export_configurations_manager.all_configs
+        self.presets = self.presets_manager.all_presets
+        self.sr_configurations = self.export_manager.all_exports
+        self.connections = self.connection_manager.all_connections
+        self.queries = self.query_manager.all_queries
         
         layout.addWidget(self.tree)
         layout.addLayout(button_bar)
@@ -75,13 +115,20 @@ class ExportsTab(QWidget):
     
     def load_sr_configs(self):
         self.tree.clear()
-        all_export_configs = self.export_configurations.keys()
-        for sr_num, sr_config_items in self.sr_configurations.items():
+        config_map = self.export_configurations_manager.config_name_id_map
+        all_export_configs = config_map.keys()
+        
+        for sr_id, sr_config_items in self.sr_configurations.items():
+
+                sr_num = sr_config_items.get('sr_num', '')
                 config_name = sr_config_items.get('config_name', '')
-                extraction_date = sr_config_items.get('extracted_on', '')
+                extraction_date = sr_config_items.get('extracted_on', "No Extractions Yet")
                 extraction_log = sr_config_items.get('extraction_log', '')
+
                 item = QTreeWidgetItem([sr_num, config_name, extraction_date, ''])
+                item.setData(0, Qt.ItemDataRole.UserRole, sr_id)
                 self.tree.addTopLevelItem(item)
+                
                 export_config_selector = QComboBox()
                 export_config_selector.setView(QListView())
                 export_config_selector.setObjectName('export_config_selector')
@@ -91,14 +138,19 @@ class ExportsTab(QWidget):
                 export_config_selector.addItem('No Selection')
                 export_config_selector.addItems(all_export_configs)
                 index = export_config_selector.findText(config_name)
+                
                 if index!= (-1):
                     export_config_selector.setCurrentIndex(index)
-                export_config_selector.currentTextChanged.connect(self.dynamic_save)
+
+                export_config_selector.currentTextChanged.connect(self.update_config)
+                
                 self.tree.setItemWidget(item, 1, export_config_selector)
+                
                 preview_btn = QPushButton()
                 preview_btn.setIcon(self.style().standardIcon(QStyle.SP_FileDialogDetailedView))
                 preview_btn.setFlat(True)
                 preview_btn.clicked.connect(self.show_sr_logs)
+                
                 self.tree.setItemWidget(item, 3, preview_btn)
     
     def show_sr_logs(self):
@@ -106,42 +158,150 @@ class ExportsTab(QWidget):
         self.logs_preview_tree = TreePopUp(None, self.styling_manager, self.history_manager, LogViewer, selected_sr=sr_num)
     
     def new_extraction(self):
-                
-        while True:
-            sr_num, ok1 = StyledInputDialog('Service Request Number', 'Enter SR#:').get_text()
-            if re.fullmatch(r"\d{4,5}", sr_num):
-                if ok1:
-                    break
-            QMessageBox.information(self, "SR Number Guide", "Please enter a number of either 4 or 5 digits")
-        self.export_manager.new_export(sr_num)
-    
-    def save_extraction(self):
-        currentItem = self.tree.currentItem()
-        config_name = currentItem.text(0)
-        self.export_manager.save_exports()
-    
-    def modify_extraction(self):
-        
-        current_item = self.tree.currentItem()
-        old_sr_num = current_item.text(0)
-        new_sr_num = ''
 
-        while True:
-            new_sr_num, ok1 = StyledInputDialog('Service Request Number', 'Enter SR#:', default_text = old_sr_num).get_text()
-            if re.fullmatch(r"\d{4,5}", new_sr_num):
-                if ok1:
-                    break
-            QMessageBox.information(self, "SR Number Guide", "Please enter a number of either 4 or 5 digits")
+        try:
+
+            export_configs = self.export_configurations_manager.config_names
+
+            while True:
+
+                sr_num, ok1 = StyledInputDialog(
+                    'Service Request Number', 
+                    'Enter SR# ( 4- 5 digits )'
+                ).get_text()
+                
+                if not ok1 or not sr_num:
+                    return
+
+                if not (sr_num.isdigit() and 4 <= len(sr_num) <= 5):
+                    QMessageBox.warning(self, "SR number guide", "Entered number is not within the accepted limits!!")
+                    continue
+
+                sr_num = sr_num.strip()
+
+                if sr_num in self.export_manager.sr_nums:
+                    QMessageBox.warning(self, "Warning", "SR Number already exists. Please enter a new number.!!")
+                    continue
+
+                config_selection_box = SelectorDialog("Select configuration", "Select an export config:", export_configs)
+                
+                try:
+                    if config_selection_box.exec_() == QDialog.Rejected:
+                        return
+
+                    selected_config = config_selection_box.get_selected_item()
+
+                finally:
+                    config_selection_box.deleteLater()
+
+                selected_config_id = self.export_configurations_manager.get_config_id(selected_config)
+
+                new_sr_payload = NewSRPayload(
+                    sr_num = sr_num,
+                    export_config_id = selected_config_id,
+                    export_config_name = selected_config
+                )
+                
+                self.export_manager.new_export_sr(new_sr_payload) 
+                return
+
+        except Exception as e:
             
-        new_export_dict = self.modification_helper(old_sr_num, new_sr_num)
-        self.export_manager.exports = new_export_dict
-        self.export_manager.save_exports()
-        return 
-            
-    def remove_configuration(self):
-        currentItem = self.tree.currentItem()
-        sr_num = currentItem.text(0)
-        self.export_manager.remove_export(sr_num)
+            logger.error(f"{type(e).__name__}: {e}", exc_info=True)
+            user_msg = f"<b>An error occurred:</b> {e}<br><br><i>Check logs for full traceback.</i>"
+            QMessageBox.critical(self, "Error", user_msg)
+    
+    def update_extraction(self):
+
+        try:
+
+            current_item = self.tree.currentItem()
+
+            sr_id = current_item.data(0, Qt.ItemDataRole.UserRole)
+            old_sr_num = current_item.text(0)
+                    
+            while True:
+
+                new_sr_num, ok1 = StyledInputDialog(
+                    'Service Request Number', 
+                    'Enter SR# ( 4- 5 digits )'
+                ).get_text()
+                
+                if not ok1 or not new_sr_num:
+                    return
+
+                if not (new_sr_num.isdigit() and 4 <= len(new_sr_num) <= 5):
+                    QMessageBox.warning(self, "SR number guide", "Entered number is not within the accepted limits!!")
+                    continue
+
+                new_sr_num = new_sr_num.strip()
+
+                if new_sr_num in self.export_manager.sr_nums:
+                    QMessageBox.warning(self, "Warning", "SR Number already exists. Please enter a new number.!!")
+                    continue
+
+                update_sr_payload = UpdateSRPayload(
+                    sr_id = sr_id,
+                    old_sr_num = old_sr_num,
+                    new_sr_num = new_sr_num
+                )
+                    
+                self.export_manager.update_export_sr(update_sr_payload)
+                break
+
+        except Exception as e:
+
+            logger.error(f"{type(e).__name__}: {e}", exc_info=True)
+            user_msg = f"<b>An error occurred:</b> {e}<br><br><i>Check logs for full traceback.</i>"
+            QMessageBox.critical(self, "Error", user_msg)
+
+    
+    def remove_extraction(self):
+
+        try:
+
+            current_item = self.tree.currentItem()
+
+            sr_id = current_item.data(0, Qt.ItemDataRole.UserRole)
+            sr_num = current_item.text(0)
+
+            remove_sr_payload = RemoveSRPayload(
+                sr_id = sr_id,
+                sr_num = sr_num
+            )
+                
+            self.export_manager.remove_sr(remove_sr_payload)
+
+        except Exception as e:
+
+            logger.error(f"{type(e).__name__}: {e}", exc_info=True)
+            user_msg = f"<b>An error occurred:</b> {e}<br><br><i>Check logs for full traceback.</i>"
+            QMessageBox.critical(self, "Error", user_msg)
+
+    def update_config(self):
+    
+        try:
+    
+            current_item = self.tree.currentItem()
+            sr_id = current_item.data(0, Qt.ItemDataRole.UserRole)
+
+            export_config_selector = self.tree.itemWidget(current_item, 1)
+            selected_config = export_config_selector.currentText()
+            selected_config_id = self.export_configurations_manager.get_config_id(selected_config)
+
+            update_sr_config_payload = UpdateSRConfigPayload(
+                sr_id = sr_id,
+                export_config_id = selected_config_id,
+                export_config_name = selected_config 
+            )
+
+            self.export_manager.update_export_sr_config(update_sr_config_payload)
+
+        except Exception as e:
+        
+            logger.error(f"{type(e).__name__}: {e}", exc_info=True)
+            user_msg = f"<b>An error occurred:</b> {e}<br><br><i>Check logs for full traceback.</i>"
+            QMessageBox.critical(self, "Error", user_msg)
 
     def dynamic_save(self):
         current_item = self.tree.currentItem()
@@ -161,15 +321,28 @@ class ExportsTab(QWidget):
         return new_dict
     
     def perform_extraction(self):
+
         current_item = self.tree.currentItem()
-        timestamp = QMessageBox.warning(self, 'Export', 'Select a configuration to proceed!') if not current_item else datetime.now()
+
+        if not current_item:
+            QMessageBox.warning(
+                self,
+                'Export',
+                'Select a configuration to proceed!'
+            )
+            return
+
+        timestamp = datetime.now()
         date_today = timestamp.strftime('%d%m%Y')
+
         sr_num = current_item.text(0)
         sr_name = f'mftbcffr_{sr_num}'
         base_folder_name = f'export_{sr_name}_{date_today}'
         base_folder_path = os.path.join(self.BASE_DIR, base_folder_name)
+
         if not os.path.exists(base_folder_path):
             os.makedirs(base_folder_path, exist_ok=True)
+
         export_config_selector = self.tree.itemWidget(current_item, 1)
         selected_config = export_config_selector.currentText()
         preset_list = self.export_configurations[selected_config]['preset_list']

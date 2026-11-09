@@ -1,9 +1,10 @@
 {
     "Hikita San Config 1": {
         "preset_list": [
-            "Hikita San VM SR Part 1",
-            "Hikita San CM SR Part 1"
+            "Hikita San CM SR Part 1",
+            "Hikita San VM SR Part 1"
         ],
+<<<<<<< HEAD
         "extracted_on": "2026-10-12 22:09:42"
     },
     "Ikezawa SR": {
@@ -11,12 +12,27 @@
             "Ikezawa San CM SR"
         ],
         "extracted_on": "2026-10-13 22:54:25"
+=======
+        "last_extracted": null
+>>>>>>> 9e9615b (v2.0.0 - Major Backend Update - Postgres Integration)
     },
     "Hikita San Config 2": {
         "preset_list": [
-            "Hikita San VM SR Part 2",
-            "Hikita San CM SR Part 2"
+            "Hikita San CM SR Part 2",
+            "Hikita San VM SR Part 2"
         ],
+<<<<<<< HEAD
         "extracted_on": "2026-10-14 17:21:40"
+=======
+        "last_extracted": null,
+        "extracted_on": "2026-10-23 02:31:09"
+    },
+    "Ikezawa SR": {
+        "preset_list": [
+            "Ikezawa San CM SR",
+            "Ikezawa San VM SR"
+        ],
+        "last_extracted": null
+>>>>>>> 9e9615b (v2.0.0 - Major Backend Update - Postgres Integration)
     }
 }

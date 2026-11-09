@@ -6,7 +6,6 @@ class DBClient:
         self.user = user
         self.password = password
         self.dsn = dsn
-        self.conn = None
         self.pool = self.get_pool()
 
     def get_pool(self):
@@ -41,13 +40,12 @@ class DBClient:
                 cursor.execute(sql, bind_vars)
                 return cursor.rowcount
 
-    def commit(self):
-        self.conn.commit()
+    def close_pool(self):
+        if self.pool is None:
+            return False
 
-    def rollback(self):
-        self.conn.rollback()
-
-    def close(self):
-        self.conn.close()
+        self.pool.close()
+        self.pool = None
+        return True
 
    

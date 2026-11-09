@@ -1,37 +1,7 @@
 {
-    "5100": {
-        "config_name": "Ikezawa SR",
-        "extracted_on": "2025-12-11 23:19:25",
-        "extraction_log": [
-            {
-                "env": "Aomori",
-                "sql_name": "VM Ikezawa",
-                "record_count": 78524
-            },
-            {
-                "env": "Iwate",
-                "sql_name": "VM Ikezawa",
-                "record_count": 65225
-            },
-            {
-                "env": "Shikoku",
-                "sql_name": "VM Ikezawa",
-                "record_count": 74807
-            },
-            {
-                "env": "Wakayama",
-                "sql_name": "VM Ikezawa",
-                "record_count": 53288
-            },
-            {
-                "env": "Chugoku",
-                "sql_name": "VM Ikezawa",
-                "record_count": 2394088
-            }
-        ]
-    },
-    "5154": {
+    "6427": {
         "config_name": "Hikita San Config 1",
+<<<<<<< HEAD
         "extracted_on": "2025-12-20 23:14:12",
         "extraction_log": [
             {
@@ -602,5 +572,24 @@
                 "sql_name": "CM Ikezawa"
             }
         ]
+=======
+        "extracted_on": "No data stored",
+        "extraction_log": ""
+    },
+    "6428": {
+        "config_name": "Hikita San Config 2",
+        "extracted_on": "No data stored",
+        "extraction_log": ""
+    },
+    "6430": {
+        "config_name": "Ikezawa SR",
+        "extracted_on": "No data stored",
+        "extraction_log": ""
+    },
+    "6547": {
+        "config_name": "33dcc732-fd2b-4ff9-bf24-8a7868ada1ac",
+        "extracted_on": "No Extractions Yet",
+        "extraction_log": ""
+>>>>>>> 9e9615b (v2.0.0 - Major Backend Update - Postgres Integration)
     }
 }

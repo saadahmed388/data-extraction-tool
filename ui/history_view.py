@@ -1,12 +1,18 @@
+from __future__ import annotations
+
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem,
     QMessageBox, QTableWidget, QTableWidgetItem, QDialog, QStyle
 )
 
 from utilities.utils import LogViewer
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from core.managers.history_manager import HistoryManager
 
 class HistoryTab(QWidget):
-    def __init__(self, styling_manager, history_manager):
+    def __init__(self, history_manager: HistoryManager, styling_manager):
         super().__init__()      
         
         self.styling_manager = styling_manager

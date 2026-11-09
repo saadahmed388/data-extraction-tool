@@ -4,6 +4,7 @@ from utilities.stylesheets import StylingManager
 class StyledInputDialog(QDialog):
     def __init__(self, title, label, caps = "N", default_text = "", num_lines = "S"):
         super().__init__()
+        
         self.styling_manager = StylingManager()
         self.setWindowTitle(title)
         self.resize(400, 150)
