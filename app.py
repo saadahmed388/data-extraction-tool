@@ -4,7 +4,7 @@ import sys
 from PyQt5.QtWidgets import QApplication
 from ui.main_window import MainWindow
 from PyQt5.QtGui import QIcon
-from utilities.logger_config import setup_logging
+from config.logger_config import setup_logging
 import logging
 
 setup_logging()
@@ -16,6 +16,7 @@ if __name__ == '__main__':
     try:
         app = QApplication(sys.argv)
         app.setWindowIcon(QIcon("assets/data_extcn_app_icon.png"))
+        
         win = MainWindow()
         win.show()
         sys.exit(app.exec_())

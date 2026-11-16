@@ -1,0 +1,30 @@
+# Environments
+.env
+<<<<<<< HEAD
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Custom project folders
+removables/
+build/
+=======
+
+# Custom folders
+removables/
+miscellaneous/
+
+# Python cache
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Build directories
+build/
+dist/
+>>>>>>> 9e9615b (v2.0.0 - Major Backend Update - Postgres Integration)
