@@ -1,4 +1,7 @@
 PyQt5
-regex
-pandas
 oracledb
+psycopg2-binary
+rocessing
+pandas
+pydantic
+python-dotenv

@@ -452,6 +452,7 @@ class ExportsTab(QWidget):
 
             self.history_manager.add_report(new_report_payload)
             self.export_manager.sr_config_updated.emit()
+            self.export_configurations_manager.export_configs_updated.emit()
 
         except Exception as e:
 

@@ -10441,3 +10441,401 @@ TypeError: string indices must be integers, not 'str'
 2026-11-16 16:48:47,415 | INFO | MainThread | ui.export_view | export_view.py:433  | Execution Complete ......... Records successfully exported.
 2026-11-16 16:48:47,415 | INFO | MainThread | ui.export_view | export_view.py:434  | Time taken : 0:00:07.718181
 2026-11-16 16:48:47,499 | INFO | MainThread | core.postgres_managers.history_manager | history_manager.py:77  | 1 row/s inserted
+<<<<<<< HEAD
+=======
+2026-11-17 16:38:37,395 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 16:38:37,906 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 16:38:37,906 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 16:38:37,906 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 16:38:37,907 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 16:38:37,907 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 16:38:37,907 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 16:38:38,226 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 16:38:38,251 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 16:38:38,291 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 16:38:38,317 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 16:38:38,363 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 16:38:38,388 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 16:38:38,439 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 16:38:38,488 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+2026-11-17 16:39:10,218 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:65  | 1 rows/s inserted
+2026-11-17 16:39:26,693 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:164  | Updated 1 row/s | Renamed preset Test -> Garbage Address Collection
+2026-11-17 16:39:32,833 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:39:38,157 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:39:43,373 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:39:48,229 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:39:55,560 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:40:03,716 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:40:08,334 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:40:13,070 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:265  | Updated 1 item/s | preset: Garbage Address Collection
+2026-11-17 16:40:22,333 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:213  | Added 1 row/s | Preset: Garbage Address Collection
+2026-11-17 16:40:33,347 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:213  | Added 1 row/s | Preset: Garbage Address Collection
+2026-11-17 16:40:41,764 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:213  | Added 1 row/s | Preset: Garbage Address Collection
+2026-11-17 16:40:49,519 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:213  | Added 1 row/s | Preset: Garbage Address Collection
+2026-11-17 16:41:03,351 | INFO | MainThread | core.postgres_managers.export_config_manager | export_config_manager.py:62  | 1 row/s inserted
+2026-11-17 16:41:09,169 | INFO | MainThread | core.postgres_managers.export_config_manager | export_config_manager.py:186  | 1 row/s inserted
+2026-11-17 16:41:34,873 | INFO | MainThread | core.postgres_managers.export_manager | export_manager.py:62  | 1 rows/s inserted
+2026-11-17 16:41:40,922 | INFO | MainThread | ui.export_view | export_view.py:382  | Execution started for configuration : Garbage Address Collection || SR# : 6491
+2026-11-17 16:41:40,923 | ERROR | ThreadPoolExecutor-0_0 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: 781624d1-8455-4cd9-9265-fda9546b68db || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,924 | ERROR | ThreadPoolExecutor-0_1 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: 4447c877-42be-4010-987e-8dcc87144b23 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,924 | ERROR | ThreadPoolExecutor-0_2 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: 495eb2fd-4409-41f4-a461-5d795afb8bf6 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,924 | ERROR | ThreadPoolExecutor-0_3 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: f24561ec-d29d-4d67-ac28-bace7907caf0 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,925 | ERROR | ThreadPoolExecutor-0_4 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: 5cc834f4-4414-476e-8489-9e33e6410eb1 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,926 | ERROR | ThreadPoolExecutor-0_5 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: 7c53ee9a-01c0-4c02-8260-91715e51efe1 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,926 | ERROR | ThreadPoolExecutor-0_0 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: a594f651-7033-4bc0-bb30-740a1ac613d6 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,926 | ERROR | Dummy-10 | core.executors.executables | executables.py:54  | 'class'
+2026-11-17 16:41:40,927 | ERROR | ThreadPoolExecutor-0_6 | core.executors.executables | executables.py:103  | Execution failed for preset item || ENV: e36fe5a6-995f-4347-a987-a322d058ff10 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 76, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:41:40,933 | ERROR | MainThread | ui.export_view | export_view.py:424  | KeyError: 'class'
+NoneType: None
+2026-11-17 16:43:20,839 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 16:43:21,172 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 16:43:21,173 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 16:43:21,173 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 16:43:21,173 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 16:43:21,173 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 16:43:21,173 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 16:43:21,434 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 16:43:21,459 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 16:43:21,503 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 16:43:21,530 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 16:43:21,578 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 16:43:21,601 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 16:43:21,628 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 16:43:21,666 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+2026-11-17 16:43:30,285 | INFO | MainThread | ui.export_view | export_view.py:382  | Execution started for configuration : Garbage Address Collection || SR# : 6491
+2026-11-17 16:43:30,290 | ERROR | ThreadPoolExecutor-0_0 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: e36fe5a6-995f-4347-a987-a322d058ff10 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,293 | ERROR | ThreadPoolExecutor-0_3 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: 5cc834f4-4414-476e-8489-9e33e6410eb1 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,293 | ERROR | Dummy-10 | core.executors.executables | executables.py:54  | join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,296 | ERROR | ThreadPoolExecutor-0_2 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: 7c53ee9a-01c0-4c02-8260-91715e51efe1 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,296 | ERROR | MainThread | ui.export_view | export_view.py:424  | TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+NoneType: None
+2026-11-17 16:43:30,297 | ERROR | ThreadPoolExecutor-0_1 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: a594f651-7033-4bc0-bb30-740a1ac613d6 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,321 | ERROR | ThreadPoolExecutor-0_7 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: 781624d1-8455-4cd9-9265-fda9546b68db || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,321 | ERROR | ThreadPoolExecutor-0_6 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: 4447c877-42be-4010-987e-8dcc87144b23 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,322 | ERROR | ThreadPoolExecutor-0_4 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: f24561ec-d29d-4d67-ac28-bace7907caf0 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:43:30,322 | ERROR | ThreadPoolExecutor-0_5 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: 495eb2fd-4409-41f4-a461-5d795afb8bf6 || SQL: 313d56d9-5378-4814-a5c6-3917e84d4adf
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 80, in process_item
+    class_folder_path = os.path.join(base_folder_path, class_name)
+  File "<frozen ntpath>", line 139, in join
+  File "<frozen genericpath>", line 188, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+2026-11-17 16:46:48,242 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 16:46:48,605 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 16:46:48,605 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 16:46:48,605 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 16:46:48,605 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 16:46:48,606 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 16:46:48,606 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 16:46:48,903 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 16:46:48,945 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 16:46:48,991 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 16:46:49,034 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 16:46:49,083 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 16:46:49,126 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 16:46:49,152 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 16:46:49,175 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+2026-11-17 16:46:57,300 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:209  | 1 row/s updated | Name: Garbage Addresses
+2026-11-17 16:47:01,996 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:209  | 1 row/s updated | Name: Garbage Addresses
+2026-11-17 16:47:57,533 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:65  | 1 rows/s inserted
+2026-11-17 16:48:10,682 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:108  | 1 row/s deleted | Name: abc
+2026-11-17 16:48:26,904 | INFO | MainThread | ui.export_view | export_view.py:382  | Execution started for configuration : Garbage Address Collection || SR# : 6491
+2026-11-17 16:48:26,913 | INFO | ThreadPoolExecutor-0_0 | core.executors.executables | executables.py:88  | Execution Started || ENV: Chugoku || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:26,927 | INFO | ThreadPoolExecutor-0_1 | core.executors.executables | executables.py:88  | Execution Started || ENV: Wakayama || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:26,927 | INFO | ThreadPoolExecutor-0_2 | core.executors.executables | executables.py:88  | Execution Started || ENV: Okinawa || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:26,928 | INFO | ThreadPoolExecutor-0_6 | core.executors.executables | executables.py:88  | Execution Started || ENV: Aomori || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:26,929 | INFO | ThreadPoolExecutor-0_7 | core.executors.executables | executables.py:88  | Execution Started || ENV: Okayama || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:26,929 | INFO | ThreadPoolExecutor-0_4 | core.executors.executables | executables.py:88  | Execution Started || ENV: Iwate || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:26,929 | INFO | ThreadPoolExecutor-0_3 | core.executors.executables | executables.py:88  | Execution Started || ENV: Shikoku || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:26,930 | INFO | ThreadPoolExecutor-0_5 | core.executors.executables | executables.py:88  | Execution Started || ENV: Hakodate || SQL: Garbage Addresses || Class: Other
+2026-11-17 16:48:28,076 | INFO | ThreadPoolExecutor-0_1 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Wakayama || SQL: Garbage Addresses || Class: Other || Count: 2292
+2026-11-17 16:48:28,083 | INFO | ThreadPoolExecutor-0_5 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Hakodate || SQL: Garbage Addresses || Class: Other || Count: 2291
+2026-11-17 16:48:28,098 | INFO | ThreadPoolExecutor-0_6 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Aomori || SQL: Garbage Addresses || Class: Other || Count: 2291
+2026-11-17 16:48:28,110 | INFO | ThreadPoolExecutor-0_2 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Okinawa || SQL: Garbage Addresses || Class: Other || Count: 2292
+2026-11-17 16:48:28,131 | INFO | ThreadPoolExecutor-0_3 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Shikoku || SQL: Garbage Addresses || Class: Other || Count: 2292
+2026-11-17 16:48:28,133 | INFO | ThreadPoolExecutor-0_4 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Iwate || SQL: Garbage Addresses || Class: Other || Count: 2292
+2026-11-17 16:48:41,771 | INFO | ThreadPoolExecutor-0_7 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Okayama || SQL: Garbage Addresses || Class: Other || Count: 2288
+2026-11-17 16:48:48,948 | INFO | ThreadPoolExecutor-0_0 | core.executors.executables | executables.py:98  | Execution Successful || ENV: Chugoku || SQL: Garbage Addresses || Class: Other || Count: 2292
+2026-11-17 16:48:48,950 | INFO | MainThread | ui.export_view | export_view.py:433  | Execution Complete ......... Records successfully exported.
+2026-11-17 16:48:48,950 | INFO | MainThread | ui.export_view | export_view.py:434  | Time taken : 0:00:22.045306
+2026-11-17 16:48:49,039 | INFO | MainThread | core.postgres_managers.history_manager | history_manager.py:77  | 1 row/s inserted
+2026-11-17 16:49:45,048 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 16:49:45,468 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 16:49:45,469 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 16:49:45,469 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 16:49:45,469 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 16:49:45,469 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 16:49:45,469 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 16:49:45,767 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 16:49:45,793 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 16:49:45,830 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 16:49:45,854 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 16:49:45,891 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 16:49:45,916 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 16:49:45,939 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 16:49:45,966 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+2026-11-17 16:53:01,638 | INFO | MainThread | core.postgres_managers.export_manager | export_manager.py:143  | 1 rows/s updated
+2026-11-17 16:53:37,848 | ERROR | MainThread | core.postgres_managers.query_manager | query_manager.py:122  | Failed to delete query due to an unexpected error.
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 105, in remove_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(313d56d9-5378-4814-a5c6-3917e84d4adf) is still referenced from table "preset_items".
+
+2026-11-17 16:53:37,885 | ERROR | MainThread | core.managers.query_manager | query_manager.py:114  | Failed to delete query Garbage Addresses at the application layer
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\managers\query_manager.py", line 105, in remove_query
+    self.postgres_query_manager.remove_query(remove_query_payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 130, in remove_query
+    raise e
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 105, in remove_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(313d56d9-5378-4814-a5c6-3917e84d4adf) is still referenced from table "preset_items".
+
+2026-11-17 16:53:37,887 | ERROR | MainThread | ui.queries_view | queries_view.py:187  | RuntimeError: Unable to delete query (ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(313d56d9-5378-4814-a5c6-3917e84d4adf) is still referenced from table "preset_items".
+).
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\managers\query_manager.py", line 105, in remove_query
+    self.postgres_query_manager.remove_query(remove_query_payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 130, in remove_query
+    raise e
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 105, in remove_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(313d56d9-5378-4814-a5c6-3917e84d4adf) is still referenced from table "preset_items".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\ui\queries_view.py", line 181, in remove_query
+    self.query_manager.remove_query(remove_query_payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\managers\query_manager.py", line 115, in remove_query
+    raise RuntimeError(f"Unable to delete query ({type(e).__name__}: {e}).") from e
+RuntimeError: Unable to delete query (ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(313d56d9-5378-4814-a5c6-3917e84d4adf) is still referenced from table "preset_items".
+).
+2026-11-17 16:54:51,248 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:65  | 1 rows/s inserted
+2026-11-17 16:55:04,823 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:66  | 1 rows/s inserted
+2026-11-17 16:55:14,023 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:213  | Added 1 row/s | Preset: Garbage Address Test
+2026-11-17 16:55:21,774 | INFO | MainThread | core.postgres_managers.export_config_manager | export_config_manager.py:62  | 1 row/s inserted
+2026-11-17 16:55:26,177 | INFO | MainThread | core.postgres_managers.export_config_manager | export_config_manager.py:186  | 1 row/s inserted
+2026-11-17 16:56:01,845 | INFO | MainThread | core.postgres_managers.export_manager | export_manager.py:62  | 1 rows/s inserted
+2026-11-17 16:56:09,064 | INFO | MainThread | ui.export_view | export_view.py:382  | Execution started for configuration : Garbage Test || SR# : 65910
+2026-11-17 16:56:09,066 | ERROR | ThreadPoolExecutor-0_0 | core.executors.executables | executables.py:105  | Execution failed for preset item || ENV: 781624d1-8455-4cd9-9265-fda9546b68db || SQL: 2f2eed6d-dd8d-467b-9343-6a995cc113ce
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\executors\executables.py", line 78, in process_item
+    class_name = self.queries[query_id]["class"]
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'class'
+2026-11-17 16:56:09,068 | ERROR | Dummy-10 | core.executors.executables | executables.py:54  | 'class'
+2026-11-17 16:56:09,075 | ERROR | MainThread | ui.export_view | export_view.py:424  | KeyError: 'class'
+NoneType: None
+2026-11-17 16:56:19,698 | INFO | MainThread | ui.export_view | export_view.py:382  | Execution started for configuration : Garbage Test || SR# : 65910
+2026-11-17 17:03:48,862 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 17:03:49,207 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 17:03:49,207 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 17:03:49,207 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 17:03:49,207 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 17:03:49,208 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 17:03:49,208 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 17:03:49,494 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 17:03:49,522 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 17:03:49,567 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 17:03:49,591 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 17:03:49,637 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 17:03:49,685 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 17:03:49,711 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 17:03:49,735 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+2026-11-17 17:03:57,138 | ERROR | MainThread | core.postgres_managers.query_manager | query_manager.py:123  | Failed to delete query due to an unexpected error.
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 106, in remove_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(2f2eed6d-dd8d-467b-9343-6a995cc113ce) is still referenced from table "preset_items".
+
+2026-11-17 17:03:57,170 | ERROR | MainThread | core.managers.query_manager | query_manager.py:116  | Failed to delete query Garbage Addresses Test at the application layer
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\managers\query_manager.py", line 107, in remove_query
+    self.postgres_query_manager.remove_query(remove_query_payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 131, in remove_query
+    raise e
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 106, in remove_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(2f2eed6d-dd8d-467b-9343-6a995cc113ce) is still referenced from table "preset_items".
+
+2026-11-17 17:03:57,172 | ERROR | MainThread | ui.queries_view | queries_view.py:187  | RuntimeError: Unable to delete query (ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(2f2eed6d-dd8d-467b-9343-6a995cc113ce) is still referenced from table "preset_items".
+).
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\managers\query_manager.py", line 107, in remove_query
+    self.postgres_query_manager.remove_query(remove_query_payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 131, in remove_query
+    raise e
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\postgres_managers\query_manager.py", line 106, in remove_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+psycopg2.errors.ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(2f2eed6d-dd8d-467b-9343-6a995cc113ce) is still referenced from table "preset_items".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\ui\queries_view.py", line 181, in remove_query
+    self.query_manager.remove_query(remove_query_payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PU_A_SAAHME(EXT)\Documents\Do not delete\Tools\Data Extraction\core\managers\query_manager.py", line 117, in remove_query
+    raise RuntimeError(f"Unable to delete query ({type(e).__name__}: {e}).") from e
+RuntimeError: Unable to delete query (ForeignKeyViolation: update or delete on table "queries" violates foreign key constraint "preset_items_query_id_fkey" on table "preset_items"
+DETAIL:  Key (row_id)=(2f2eed6d-dd8d-467b-9343-6a995cc113ce) is still referenced from table "preset_items".
+).
+2026-11-17 17:04:08,715 | INFO | MainThread | core.postgres_managers.export_manager | export_manager.py:102  | 1 rows/s removed
+2026-11-17 17:04:23,856 | INFO | MainThread | core.postgres_managers.export_config_manager | export_config_manager.py:128  | 1 row/s removed
+2026-11-17 17:04:31,290 | INFO | MainThread | core.postgres_managers.preset_manager | preset_manager.py:111  | 1 row/s deleted | Name : Garbage Address Test
+2026-11-17 17:05:14,781 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:109  | 1 row/s deleted | Name: Garbage Addresses Test
+2026-11-17 17:05:35,853 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:66  | 1 rows/s inserted
+2026-11-17 17:08:05,366 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:66  | 1 rows/s inserted
+2026-11-17 17:08:11,910 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:109  | 1 row/s deleted | Name: dfgh
+2026-11-17 17:12:50,292 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 17:12:51,117 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 17:12:51,117 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 17:12:51,117 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 17:12:51,117 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 17:12:51,117 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 17:12:51,117 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 17:12:51,398 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 17:12:51,442 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 17:12:51,467 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 17:12:51,489 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 17:12:51,516 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 17:12:51,540 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 17:12:51,562 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 17:12:51,605 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+2026-11-17 17:13:30,300 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 17:13:30,574 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 17:13:30,574 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 17:13:30,575 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 17:13:30,575 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 17:13:30,575 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 17:13:30,575 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 17:13:30,827 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 17:13:30,854 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 17:13:30,893 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 17:13:30,919 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 17:13:30,944 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 17:13:30,986 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 17:13:31,013 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 17:13:31,037 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+2026-11-17 17:13:52,645 | INFO | MainThread | core.postgres_managers.query_manager | query_manager.py:109  | 1 row/s deleted | Name: GA1
+2026-11-17 17:15:39,410 | INFO | MainThread | __main__ | app.py:13  | Application Started
+2026-11-17 17:15:39,709 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:45  | SUCCESS: PostgreSQL connection established
+2026-11-17 17:15:39,709 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:46  | Database: postgres
+2026-11-17 17:15:39,709 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:47  | Authenticated user: postgres
+2026-11-17 17:15:39,709 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:48  | Server IP: 2406:da12:1f1:f800:58b9:14bd:f119:deda
+2026-11-17 17:15:39,709 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:49  | Server port: 5432
+2026-11-17 17:15:39,710 | INFO | MainThread | core.postgres_managers.db_manager | db_manager.py:50  | Server version: PostgreSQL 17.11 on aarch64-unknown-linux-gnu
+2026-11-17 17:15:39,986 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okayama pool OK
+2026-11-17 17:15:40,010 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Aomori pool OK
+2026-11-17 17:15:40,058 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Hakodate pool OK
+2026-11-17 17:15:40,083 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Iwate pool OK
+2026-11-17 17:15:40,121 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Shikoku pool OK
+2026-11-17 17:15:40,166 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Okinawa pool OK
+2026-11-17 17:15:40,188 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Wakayama pool OK
+2026-11-17 17:15:40,224 | INFO | MainThread | core.managers.connection_manager | connection_manager.py:242  | Chugoku pool OK
+>>>>>>> b2fac7e (v2.0.1)

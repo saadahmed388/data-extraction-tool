@@ -49,14 +49,15 @@ class PostgresQueryManager:
         try:
             conn = self.db_manager.get_connection()
             query = """
-                INSERT INTO extraction.queries (name, sql)
-                VALUES (%s, %s)
+                INSERT INTO extraction.queries (name, sql, class)
+                VALUES (%(name)s, %(sql)s, %(q_class)s)
                 RETURNING row_id
             """
-            params = (
-                new_query_payload.name,
-                new_query_payload.sql
-            )
+            params = {
+                "name": new_query_payload.name,
+                "sql": new_query_payload.sql,
+                "q_class": new_query_payload.query_class
+            }
 
             with conn.cursor() as cursor:
                 cursor.execute(query, params)

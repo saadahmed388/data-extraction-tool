@@ -64,6 +64,8 @@ class ExtractionWorker(QObject):
 
     def process_item(self, preset_item, base_folder_path):
 
+        print(self.queries)
+
         try:
             con_name = preset_item.get("con_name", None)
             con_id = preset_item.get("con_id", None) 

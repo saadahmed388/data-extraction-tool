@@ -73,6 +73,8 @@ class QueryManager(QObject):
 
             query_name = new_query_payload.name
             query = new_query_payload.sql
+            query_class = new_query_payload.query_class
+            
             query_id = self.postgres_query_manager.add_query(new_query_payload)
             
             if not query_id:
@@ -82,6 +84,7 @@ class QueryManager(QObject):
                 "id": query_id,
                 "name": query_name, 
                 "sql": query, 
+                "class": query_class,
                 "date_added_on": timestamp,
                 "date_modified_on": timestamp
             }

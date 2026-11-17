@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QPushButton, QTreeWidget, QTreeWidgetItem, QComboBox, QListView,
-    QMessageBox, QStyle, QHBoxLayout
+    QMessageBox, QStyle, QHBoxLayout, QDialog
 )
 from PyQt5.QtCore import Qt
 from utils.sql_formatter import SqlPreview
@@ -82,12 +82,12 @@ class QueriesTab(QWidget):
             if not ok2 or not sql:
                 return
 
-            q_class_list = ["CM", "VM", "Others"]
+            q_class_list = ["CM", "VM", "Other"]
             q_class = SelectorDialog("Query Class Selector", "Select Query Class: ", q_class_list)
-            q_class.exec_()
-            q_class_name = q_class.get_selected_item() or None
-            if not q_class_name:
+            
+            if q_class.exec_() == QDialog.Rejected:
                 return
+            q_class_name = q_class.get_selected_item() or None
 
             new_query_payload = NewQueryPayload(
                 name = name,
