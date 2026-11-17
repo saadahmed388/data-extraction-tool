@@ -18,6 +18,7 @@ build/
 # Custom folders
 removables/
 miscellaneous/
+exports/
 
 # Python cache
 **/__pycache__/
