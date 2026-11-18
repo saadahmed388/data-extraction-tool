@@ -157,7 +157,7 @@ class ConnectionsTab(QWidget):
 
             self.connection_manager.remove_connection(remove_connection_payload)
 
-            QMessageBox.information(self, "Information", "Connection removed succesfully...")
+            QMessageBox.information(self, "Information", "Connection removed")
 
         except Exception as e:
 
@@ -210,6 +210,8 @@ class ConnectionsTab(QWidget):
             )
 
             self.connection_manager.update_connection(updated_connection_payload)
+
+            QMessageBox.information(self, "Information", "Connection updated")
             
         except Exception as e:
             logger.error(f"{type(e).__name__}: {e}", exc_info=True)

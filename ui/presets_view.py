@@ -239,7 +239,25 @@ class PresetsTab(QWidget):
                 name=preset_name
             )
 
+            p_dialog = None
+            
+            try:
+                                        
+                msg_str = f"Are you sure to remove the export configuration.."
+                p_dialog = PermissionDialog(msg_str, self.styling_manager)
+                action = p_dialog.exec()
+                if not action:
+                    return
+
+            finally:
+
+                if p_dialog is not None:
+                    p_dialog.deleteLater()
+            
+
             self.presets_manager.remove_preset(remove_preset_payload)
+
+            QMessageBox.information(self, "Information", "Preset removed")
 
         except Exception as e:
             

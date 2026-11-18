@@ -130,6 +130,8 @@ class ExportConfigsTab(QWidget):
 
             self.export_configurations_manager.new_export_config(new_config_payload)
 
+            QMessageBox.information(self, "Information", "Export configuraion added")
+
         except Exception as e:
             logger.error(f"{type(e).__name__}: {e}", exc_info=True)
             user_msg = f"<b>An error occurred:</b> {e}<br><br><i>Check logs for full traceback.</i>"
@@ -156,6 +158,8 @@ class ExportConfigsTab(QWidget):
             )
 
             self.export_configurations_manager.update_export_config(update_config_payload)
+
+            QMessageBox.information(self, "Information", "Export configuraion updated")
 
         except Exception as e:
 
@@ -190,7 +194,7 @@ class ExportConfigsTab(QWidget):
 
             self.export_configurations_manager.remove_export_config(remove_config_payload)
 
-            QMessageBox.information(self, "Information", "Export configuration removed successfully")
+            QMessageBox.information(self, "Information", "Export configuration removed")
 
         except Exception as e:
 
@@ -215,7 +219,7 @@ class ExportConfigsTab(QWidget):
 
             try:
                                         
-                msg_str = f"Are you sure to add the preset item...?"
+                msg_str = f"Are you sure to add/update the preset item...?"
                 p_dialog = PermissionDialog(msg_str, self.styling_manager)
                 action = p_dialog.exec()
                 if not action:

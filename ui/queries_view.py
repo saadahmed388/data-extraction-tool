@@ -97,7 +97,7 @@ class QueriesTab(QWidget):
             
             self.query_manager.add_query(new_query_payload)
 
-            QMessageBox.information(self, 'Added', f'Query {name} added')
+            QMessageBox.information(self, 'Information', f'Query {name} added')
 
         except Exception as e:
 
@@ -136,7 +136,9 @@ class QueriesTab(QWidget):
                 sql=new_sql
             )
 
-            self.query_manager.update_query(update_query_payload)          
+            self.query_manager.update_query(update_query_payload)
+
+            QMessageBox.information(self, 'Information', f'Query name updated')          
 
         except Exception as e:
 
@@ -179,7 +181,7 @@ class QueriesTab(QWidget):
 
             self.query_manager.remove_query(remove_query_payload)
 
-            QMessageBox.information(self, "Information", "Query deleted successfully")
+            QMessageBox.information(self, "Information", "Query deleted")
 
         except Exception as e:
 
@@ -275,7 +277,7 @@ class QueriesTab(QWidget):
 
             self.query_manager.update_query_class(update_query_class_payload)
 
-            QMessageBox.information(self, "Information", "Query class update successfully...")
+            QMessageBox.information(self, "Information", "Query class updated")
 
         except Exception as e:
 

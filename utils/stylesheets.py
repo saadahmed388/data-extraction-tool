@@ -256,6 +256,16 @@ class StylingManager:
                 color: #555;
             }"""
 
+    def label_style(self):
+        return """
+            QLabel {
+                font-size: 9pt;
+                color: #555555;
+                padding: 2px 0px;
+                background-color: transparent;
+            }
+        """
+    
     # A modern, elegant dark-slate minimal theme
     def elegant_qss(self):
         return """

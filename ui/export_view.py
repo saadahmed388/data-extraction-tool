@@ -454,6 +454,8 @@ class ExportsTab(QWidget):
             self.export_manager.sr_config_updated.emit()
             self.export_configurations_manager.export_configs_updated.emit()
 
+            QMessageBox.information(self, "Export Information", f"Execution Complete. Records successfully exported.\nTime taken : {end_time - start_time}")
+
         except Exception as e:
 
             logger.error(f"{type(e).__name__}: {e}", exc_info=True)
